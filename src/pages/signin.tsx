@@ -1,10 +1,33 @@
+import useLoginUser from '@/hooks/useLoginUser';
 import Link from 'next/link';
+import useAuthStore from '@/store/AuthStore';
+import { useRouter } from 'next/router';
 
 const Signin = () => {
+  const { loginMutation } = useLoginUser();
+  const [login] = useAuthStore((state) => [state.login]);
+  const router = useRouter();
+
+  const signinSubmitHandler = async (
+    event: React.FormEvent<HTMLFormElement>,
+  ) => {
+    event.preventDefault();
+    const newFormData = new FormData(event.currentTarget);
+
+    const user = await loginMutation.mutateAsync({
+      username: newFormData.get('username') as string,
+      password: newFormData.get('password') as string,
+    });
+
+    if (user) {
+      login(user);
+      router.push('/');
+    }
+  };
   return (
     <div className="flex flex-col items-center justify-center min-h-full gap-8">
       <h2 className="text-2xl font-bold">Sign in</h2>
-      <form className="flex flex-col gap-8 w-80">
+      <form className="flex flex-col gap-8 w-80" onSubmit={signinSubmitHandler}>
         <div className="flex flex-col gap-2">
           <input type="text" name="username" placeholder="ID" />
           <input type="password" name="password" placeholder="Password" />

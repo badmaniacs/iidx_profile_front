@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-bbblack bg-opacity-100 text-ttext p-8 mb-8 grid md:grid-cols-4 gap-8 text-sm relative z-10">
       <div className="flex flex-col gap-8">
         <Link href="/" className="text-xl font-bold h-[30px] flex items-end">
-          IIDX <span className="text-primary">PROFILE</span>
+          IIDX<span className="text-primary">PASTAINFO</span>
         </Link>
         <div className="flex gap-4">
           <Link href="/tweet" target="_blank">
@@ -19,7 +19,7 @@ const Footer = () => {
           <Link href="/temp">Privacy Policy</Link>
           <Link href="/temp">Terms and Conditions</Link>
           <div>
-            © 2023 IIDX PROFILE
+            © 2023 IIDXPASTAINFO
             <br />
             All rights reserved.
           </div>

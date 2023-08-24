@@ -16,7 +16,7 @@ export default function Home() {
           성과를 포함한 IIDX 프로필을 만들어보세요
         </h2>
         <p className="text-xl text-center leading-relaxed">
-          IIDX PROFILE은 e-amusement의 IIDX 홈페이지에서 플레이 기록을 가져와,
+          IIDX PASTAINFO은 e-amusement의 IIDX 홈페이지에서 플레이 기록을 가져와,
           프로필을 만들 수 있는 서비스입니다.
         </p>
       </div>

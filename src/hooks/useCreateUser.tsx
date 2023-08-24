@@ -1,6 +1,4 @@
 import { useMutation } from '@tanstack/react-query';
-import axios from 'axios';
-import { print } from 'graphql';
 import { graphql } from '../gql';
 import { CreateUserInput } from '@/gql/graphql';
 import { useState } from 'react';
