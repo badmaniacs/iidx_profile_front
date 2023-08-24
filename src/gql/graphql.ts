@@ -57,6 +57,11 @@ export type CreateUserInput = {
   username: Scalars['String']['input'];
 };
 
+export type LoginUserInput = {
+  password: Scalars['String']['input'];
+  username: Scalars['String']['input'];
+};
+
 export type Music = {
   __typename?: 'Music';
   clear_type: Scalars['String']['output'];
@@ -91,10 +96,16 @@ export type MusicInput = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  LoginUser?: Maybe<User>;
   createProfile: Profile;
   createUser: User;
   deleteUser?: Maybe<User>;
   updateUser?: Maybe<User>;
+};
+
+
+export type MutationLoginUserArgs = {
+  input: LoginUserInput;
 };
 
 

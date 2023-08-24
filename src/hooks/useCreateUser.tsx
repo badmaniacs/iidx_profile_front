@@ -4,6 +4,7 @@ import { print } from 'graphql';
 import { graphql } from '../gql';
 import { CreateUserInput } from '@/gql/graphql';
 import { useState } from 'react';
+import gqlApi from '@/utils/axios';
 
 const useCreateUser = () => {
   const [usernameDupError, setUsernameDupError] = useState(false);
@@ -18,15 +19,11 @@ const useCreateUser = () => {
       }
     }
   `);
+
   const createUserMutation = async (input: CreateUserInput) => {
-    const response = await axios.post('http://localhost:3000/graphql', {
-      query: print(createUserDocument),
-      variables: {
-        input,
-      },
-    });
-    return response.data;
+    return gqlApi.execute(createUserDocument, input);
   };
+
   const mutation = useMutation(createUserMutation, {
     onSuccess: (data) => {
       setUsernameDupError(false);
