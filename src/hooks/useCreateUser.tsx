@@ -2,7 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 import { graphql } from '../gql';
 import { CreateUserInput } from '@/gql/graphql';
 import { useState } from 'react';
-import gqlApi from '@/utils/axios';
+import { gqlApi } from '@/utils/axios';
 
 const useCreateUser = () => {
   const [usernameDupError, setUsernameDupError] = useState(false);

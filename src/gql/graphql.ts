@@ -49,6 +49,7 @@ export type CreateProfileInput = {
   radar: RadarInput;
   region: Scalars['String']['input'];
   userId: Scalars['Float']['input'];
+  ver: Scalars['Float']['input'];
 };
 
 export type CreateUserInput = {
@@ -140,6 +141,7 @@ export type Profile = {
   musicData: MusicData;
   radar: RadarData;
   region: Scalars['String']['output'];
+  ver: Scalars['Int']['output'];
 };
 
 export type Query = {
@@ -202,6 +204,7 @@ export type UpdateUserInput = {
 
 export type User = {
   __typename?: 'User';
+  accessToken: Scalars['String']['output'];
   createAt: Scalars['DateTime']['output'];
   email: Scalars['String']['output'];
   id: Scalars['Int']['output'];

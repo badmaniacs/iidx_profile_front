@@ -1,7 +1,7 @@
 import { graphql } from '@/gql';
-import { LoginUserInput } from '@/gql/graphql';
+import { LoginUserInput, LoginUserMutation } from '@/gql/graphql';
 import { useMutation } from '@tanstack/react-query';
-import gqlApi from '@/utils/axios';
+import { gqlApi } from '@/utils/axios';
 
 const useLoginUser = () => {
   const LoginUserDocument = graphql(`

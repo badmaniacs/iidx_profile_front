@@ -1,32 +1,43 @@
-import { create } from 'zustand';
+import { create, StateCreator } from 'zustand';
+import { persist, PersistOptions } from 'zustand/middleware';
 
-interface AuthState {
+interface UserData {
+  id: number;
+  username: string;
+  email: string;
+  createAt: string;
+  accessToken: string;
+}
+
+export interface AuthState {
+  user: UserData | null;
   isLoggedIn: boolean;
-  user: {
-    id: number;
-    username: string;
-    email: string;
-    createAt: string;
-  } | null;
-  login: (userData: {
-    id: number;
-    username: string;
-    email: string;
-    createAt: string;
-  }) => void;
+  login: (userData: UserData) => void;
   logout: () => void;
 }
 
-const useAuthStore = create<AuthState>((set) => ({
-  isLoggedIn: false,
-  user: null,
-  login: (userData) => {
-    set({ isLoggedIn: true, user: userData });
-    console.log('로그인');
-  },
-  logout: () => {
-    set({ isLoggedIn: false, user: null });
-  },
-}));
+export type AuthStatePersist = (
+  config: StateCreator<AuthState>,
+  options: PersistOptions<AuthState> 
+) => StateCreator<AuthState>
+
+
+const useAuthStore = create<AuthState>(
+  (persist as AuthStatePersist)(
+    (set, get) => ({
+      user: null,
+      isLoggedIn: false,
+      login: (userData: UserData) => {
+        set({ isLoggedIn: true, user: userData });
+      },
+      logout: () => {
+        set({ isLoggedIn: false, user: null });
+      },
+    }),
+    {
+      name: 'user-storage',
+    },
+  ),
+);
 
 export default useAuthStore;

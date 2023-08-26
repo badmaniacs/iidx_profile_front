@@ -1,7 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
 import { ASTNode, print } from 'graphql';
-import { TypedQueryDocumentNode } from 'graphql';
-import { DocumentType } from '@/gql';
 
 class GraphqlApi {
   private client: AxiosInstance;
@@ -23,6 +21,5 @@ class GraphqlApi {
   }
 }
 
-const gqlApi = new GraphqlApi();
+export const gqlApi = new GraphqlApi();
 
-export default gqlApi;
