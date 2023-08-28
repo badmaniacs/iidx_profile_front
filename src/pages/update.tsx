@@ -2,7 +2,7 @@ import useGeneratePass from '@/hooks/useGeneratePass';
 import Link from 'next/link';
 
 const Update = () => {
-  const { generateHandler,status } = useGeneratePass()
+  const { generateHandler,status,canGenerate } = useGeneratePass()
 
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-16">
@@ -18,7 +18,7 @@ const Update = () => {
               </div>
             </div>
             <div className="h-full flex items-center justify-center">
-              <button className="btn btn-primary" disabled={false} onClick={generateHandler}>
+              <button className="btn btn-primary" disabled={!canGenerate} onClick={generateHandler}>
                 Generate
               </button>
             </div>
