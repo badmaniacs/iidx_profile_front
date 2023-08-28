@@ -23,3 +23,20 @@ class GraphqlApi {
 
 export const gqlApi = new GraphqlApi();
 
+class UserApi {
+  private client: AxiosInstance;
+
+  constructor() {
+    this.client = axios.create({
+      baseURL: 'http://localhost:3000/users',
+    });
+  }
+
+  async generatePass(data: { username: string; id: number }) {
+    const response = await this.client.post('/pass', data);
+
+    return response.data;
+  }
+}
+
+export const userApi = new UserApi();
