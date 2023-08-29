@@ -22,7 +22,7 @@ export const validateForm = (formData: FormValue): FormErrors => {
 
   const { username, email, password, passwordConfirm } = formData;
 
-  if (formData.username === null) {
+  if (formData. username === null) {
     return errors;
   }
 

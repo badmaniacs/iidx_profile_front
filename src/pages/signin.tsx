@@ -18,9 +18,8 @@ const Signin = () => {
       username: newFormData.get('username') as string,
       password: newFormData.get('password') as string,
     });
-
     if (user) {
-      login(user);
+      login(user.data.LoginUser);
       router.push('/');
     }
   };

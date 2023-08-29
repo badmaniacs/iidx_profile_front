@@ -4,7 +4,7 @@ import useAuthStore from '@/store/AuthStore';
 import { userApi } from '@/utils/axios';
 
 const useGeneratePass = () => {
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('Press button to generate token');
   const [canGenerate, setCanGenerate] = useState(true);
   const { user } = useAuthStore();
 
@@ -29,11 +29,8 @@ const useGeneratePass = () => {
     }
   }, []);
 
-  const generateMutaition = async () => {
-    return userApi.generatePass({
-      username: user?.username as string,
-      id: user?.id as number,
-    });
+  const generateMutaition = async (body: { username: string; id: number }) => {
+    return userApi.generatePass(body);
   };
   const mutation = useMutation(generateMutaition, {
     onSuccess: (data) => {
@@ -48,8 +45,9 @@ const useGeneratePass = () => {
   });
 
   const generateHandler = () => {
+    console.log(user);
     if (user) {
-      mutation.mutate();
+      mutation.mutate({ username: user.username, id: user.id });
     }
   };
 
