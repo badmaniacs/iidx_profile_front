@@ -4,7 +4,7 @@ import useAuthStore from '@/store/AuthStore';
 import { userApi } from '@/utils/axios';
 
 const useGeneratePass = () => {
-  const [status, setStatus] = useState('Press button to generate token');
+  const [status, setStatus] = useState('');
   const [canGenerate, setCanGenerate] = useState(true);
   const { user } = useAuthStore();
 
@@ -17,15 +17,15 @@ const useGeneratePass = () => {
       const thirtyMinutesInMillis = 30 * 60 * 1000; // 30 minutes in milliseconds
 
       if (timeSinceLastGenerate < thirtyMinutesInMillis) {
+        const lastGeneratedPass = localStorage.getItem('lastGeneratedPass');
+        setStatus(lastGeneratedPass as string);
         setCanGenerate(false);
       } else {
+        localStorage.removeItem('lastGeneratedPass');
         setStatus('Press button to generate token');
         setCanGenerate(true);
+        return;
       }
-    }
-    const lastGeneratedPass = localStorage.getItem('lastGeneratedPass');
-    if (lastGeneratedPass) {
-      setStatus(lastGeneratedPass);
     }
   }, []);
 
