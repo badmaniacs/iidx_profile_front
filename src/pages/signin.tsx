@@ -2,10 +2,12 @@ import useLoginUser from '@/hooks/useLoginUser';
 import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
+import useGetProfile from '@/hooks/useUpdateProfile';
 
 const Signin = () => {
   const { loginMutation } = useLoginUser();
   const [login] = useAuthStore((state) => [state.login]);
+  const { initialUpdateHandler } = useGetProfile();
   const router = useRouter();
 
   const signinSubmitHandler = async (
@@ -20,6 +22,7 @@ const Signin = () => {
     });
     if (user) {
       login(user.data.LoginUser);
+      initialUpdateHandler(user.data.LoginUser.id);
       router.push('/');
     }
   };

@@ -20,8 +20,8 @@ export type Scalars = {
 
 export type ArenaData = {
   __typename?: 'ArenaData';
-  DP: Scalars['String']['output'];
-  SP: Scalars['String']['output'];
+  DP?: Maybe<Scalars['String']['output']>;
+  SP?: Maybe<Scalars['String']['output']>;
 };
 
 export type ArenaDataInput = {
@@ -31,8 +31,8 @@ export type ArenaDataInput = {
 
 export type ClassData = {
   __typename?: 'ClassData';
-  DP: Scalars['String']['output'];
-  SP: Scalars['String']['output'];
+  DP?: Maybe<Scalars['String']['output']>;
+  SP?: Maybe<Scalars['String']['output']>;
 };
 
 export type ClassDataInput = {
@@ -46,6 +46,7 @@ export type CreateProfileInput = {
   djName: Scalars['String']['input'];
   iidxId: Scalars['String']['input'];
   musicData: MusicInput;
+  qpro: Scalars['String']['input'];
   radar: RadarInput;
   region: Scalars['String']['input'];
   userId: Scalars['Float']['input'];
@@ -56,6 +57,10 @@ export type CreateUserInput = {
   email: Scalars['String']['input'];
   password: Scalars['String']['input'];
   username: Scalars['String']['input'];
+};
+
+export type GetProfileInput = {
+  id: Scalars['Float']['input'];
 };
 
 export type LoginUserInput = {
@@ -139,6 +144,7 @@ export type Profile = {
   id: Scalars['Int']['output'];
   iidxId: Scalars['String']['output'];
   musicData: MusicData;
+  qpro: Scalars['String']['output'];
   radar: RadarData;
   region: Scalars['String']['output'];
   ver: Scalars['Int']['output'];
@@ -153,7 +159,7 @@ export type Query = {
 
 
 export type QueryGetRecentProfileByIdArgs = {
-  id: Scalars['Float']['input'];
+  input: GetProfileInput;
 };
 
 
@@ -168,34 +174,34 @@ export type QueryGetUserByUsernameArgs = {
 
 export type Radar = {
   __typename?: 'Radar';
-  CHARGE: Array<Scalars['Float']['output']>;
-  CHORD: Array<Scalars['Float']['output']>;
-  NOTES: Array<Scalars['Float']['output']>;
-  PEAK: Array<Scalars['Float']['output']>;
-  SCRATHCH: Array<Scalars['Float']['output']>;
-  SOFLAN: Array<Scalars['Float']['output']>;
-  TOTAL: Array<Scalars['Float']['output']>;
+  CHARGE: Scalars['String']['output'];
+  CHORD: Scalars['String']['output'];
+  NOTES: Scalars['String']['output'];
+  PEAK: Scalars['String']['output'];
+  SCRATHCH: Scalars['String']['output'];
+  SOFLAN: Scalars['String']['output'];
+  TOTAL: Scalars['String']['output'];
 };
 
 export type RadarData = {
   __typename?: 'RadarData';
-  DP: Radar;
-  SP: Radar;
+  DP?: Maybe<Radar>;
+  SP?: Maybe<Radar>;
 };
 
 export type RadarDataInput = {
-  CHARGE: Array<Scalars['Float']['input']>;
-  CHORD: Array<Scalars['Float']['input']>;
-  NOTES: Array<Scalars['Float']['input']>;
-  PEAK: Array<Scalars['Float']['input']>;
-  SCRATHCH: Array<Scalars['Float']['input']>;
-  SOFLAN: Array<Scalars['Float']['input']>;
-  TOTAL: Array<Scalars['Float']['input']>;
+  CHARGE: Scalars['String']['input'];
+  CHORD: Scalars['String']['input'];
+  NOTES: Scalars['String']['input'];
+  PEAK: Scalars['String']['input'];
+  SCRATHCH: Scalars['String']['input'];
+  SOFLAN: Scalars['String']['input'];
+  TOTAL: Scalars['String']['input'];
 };
 
 export type RadarInput = {
-  DP: RadarDataInput;
-  SP: RadarDataInput;
+  DP: Array<RadarDataInput>;
+  SP: Array<RadarDataInput>;
 };
 
 export type UpdateUserInput = {
@@ -226,6 +232,14 @@ export type LoginUserMutationVariables = Exact<{
 
 export type LoginUserMutation = { __typename?: 'Mutation', LoginUser?: { __typename?: 'User', id: number, email: string, username: string, createAt: any } | null };
 
+export type GetRecentProfileByIdQueryVariables = Exact<{
+  input: GetProfileInput;
+}>;
+
+
+export type GetRecentProfileByIdQuery = { __typename?: 'Query', getRecentProfileById?: { __typename?: 'Profile', createAt: any, djName: string, iidxId: string, qpro: string, region: string, ver: number, arena: { __typename?: 'ArenaData', SP?: string | null, DP?: string | null }, class: { __typename?: 'ClassData', SP?: string | null, DP?: string | null }, musicData: { __typename?: 'MusicData', SP: Array<{ __typename?: 'Music', clear_type: string, difficulty: string, level: number, music_name: string, rank: string, score: string }>, DP: Array<{ __typename?: 'Music', clear_type: string, difficulty: string, level: number, music_name: string, rank: string, score: string }> }, radar: { __typename?: 'RadarData', SP?: { __typename?: 'Radar', CHORD: string, CHARGE: string, NOTES: string, SCRATHCH: string, SOFLAN: string, PEAK: string, TOTAL: string } | null, DP?: { __typename?: 'Radar', CHORD: string, CHARGE: string, NOTES: string, SCRATHCH: string, SOFLAN: string, PEAK: string, TOTAL: string } | null } } | null };
+
 
 export const CreateUserDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"createUser"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"CreateUserInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"createUser"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"username"}},{"kind":"Field","name":{"kind":"Name","value":"email"}}]}}]}}]} as unknown as DocumentNode<CreateUserMutation, CreateUserMutationVariables>;
 export const LoginUserDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"LoginUser"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"LoginUserInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"LoginUser"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"email"}},{"kind":"Field","name":{"kind":"Name","value":"username"}},{"kind":"Field","name":{"kind":"Name","value":"createAt"}}]}}]}}]} as unknown as DocumentNode<LoginUserMutation, LoginUserMutationVariables>;
+export const GetRecentProfileByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getRecentProfileById"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"GetProfileInput"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"getRecentProfileById"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"arena"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"SP"}},{"kind":"Field","name":{"kind":"Name","value":"DP"}}]}},{"kind":"Field","name":{"kind":"Name","value":"class"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"SP"}},{"kind":"Field","name":{"kind":"Name","value":"DP"}}]}},{"kind":"Field","name":{"kind":"Name","value":"createAt"}},{"kind":"Field","name":{"kind":"Name","value":"djName"}},{"kind":"Field","name":{"kind":"Name","value":"iidxId"}},{"kind":"Field","name":{"kind":"Name","value":"musicData"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"SP"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"clear_type"}},{"kind":"Field","name":{"kind":"Name","value":"difficulty"}},{"kind":"Field","name":{"kind":"Name","value":"level"}},{"kind":"Field","name":{"kind":"Name","value":"music_name"}},{"kind":"Field","name":{"kind":"Name","value":"rank"}},{"kind":"Field","name":{"kind":"Name","value":"score"}}]}},{"kind":"Field","name":{"kind":"Name","value":"DP"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"clear_type"}},{"kind":"Field","name":{"kind":"Name","value":"difficulty"}},{"kind":"Field","name":{"kind":"Name","value":"level"}},{"kind":"Field","name":{"kind":"Name","value":"music_name"}},{"kind":"Field","name":{"kind":"Name","value":"rank"}},{"kind":"Field","name":{"kind":"Name","value":"score"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"qpro"}},{"kind":"Field","name":{"kind":"Name","value":"radar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"SP"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"CHORD"}},{"kind":"Field","name":{"kind":"Name","value":"CHARGE"}},{"kind":"Field","name":{"kind":"Name","value":"NOTES"}},{"kind":"Field","name":{"kind":"Name","value":"SCRATHCH"}},{"kind":"Field","name":{"kind":"Name","value":"SOFLAN"}},{"kind":"Field","name":{"kind":"Name","value":"PEAK"}},{"kind":"Field","name":{"kind":"Name","value":"TOTAL"}}]}},{"kind":"Field","name":{"kind":"Name","value":"DP"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"CHORD"}},{"kind":"Field","name":{"kind":"Name","value":"CHARGE"}},{"kind":"Field","name":{"kind":"Name","value":"NOTES"}},{"kind":"Field","name":{"kind":"Name","value":"SCRATHCH"}},{"kind":"Field","name":{"kind":"Name","value":"SOFLAN"}},{"kind":"Field","name":{"kind":"Name","value":"PEAK"}},{"kind":"Field","name":{"kind":"Name","value":"TOTAL"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"region"}},{"kind":"Field","name":{"kind":"Name","value":"ver"}}]}}]}}]} as unknown as DocumentNode<GetRecentProfileByIdQuery, GetRecentProfileByIdQueryVariables>;

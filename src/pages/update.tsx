@@ -1,9 +1,10 @@
 import useGeneratePass from '@/hooks/useGeneratePass';
+import useGetProfile from '@/hooks/useUpdateProfile';
 import Link from 'next/link';
 
 const Update = () => {
-  const { generateHandler,status,canGenerate } = useGeneratePass()
-
+  const { generateHandler, status, canGenerate } = useGeneratePass();
+  const {updateHandler} = useGetProfile();
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-16">
       <div className="col-span-2 flex flex-col gap-8">
@@ -18,7 +19,11 @@ const Update = () => {
               </div>
             </div>
             <div className="h-full flex items-center justify-center">
-              <button className="btn btn-primary" disabled={!canGenerate} onClick={generateHandler}>
+              <button
+                className="btn btn-primary"
+                disabled={!canGenerate}
+                onClick={generateHandler}
+              >
                 Generate
               </button>
             </div>
@@ -47,6 +52,7 @@ const Update = () => {
           </p>
         </div>
       </div>
+      <button onClick={updateHandler}>update</button>
     </div>
   );
 };

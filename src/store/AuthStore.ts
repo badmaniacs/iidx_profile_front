@@ -18,9 +18,8 @@ export interface AuthState {
 
 export type AuthStatePersist = (
   config: StateCreator<AuthState>,
-  options: PersistOptions<AuthState> 
-) => StateCreator<AuthState>
-
+  options: PersistOptions<AuthState>,
+) => StateCreator<AuthState>;
 
 const useAuthStore = create<AuthState>(
   (persist as AuthStatePersist)(

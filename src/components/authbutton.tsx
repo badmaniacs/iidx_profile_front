@@ -12,18 +12,23 @@ const Authbutton = () => {
   return (
     <>
       <li className="hidden md:block">
-        <Link className="btn btn-outline btn-sm" href="/update">
-          Profile
+        <Link className="" href="/tier">
+          서열표
         </Link>
       </li>
       <li className="hidden md:block">
-        <Link className="btn btn-outline btn-sm" href="/update">
-          Update
+        <Link className="" href="/profile">
+          프로필
         </Link>
       </li>
       <li className="hidden md:block">
-        <button className="btn btn-outline btn-sm" onClick={logoutHandler}>
-          Sign Out
+        <Link className="" href="/update">
+          업데이트
+        </Link>
+      </li>
+      <li className="hidden md:block">
+        <button className="" onClick={logoutHandler}>
+          로그아웃
         </button>
       </li>
     </>

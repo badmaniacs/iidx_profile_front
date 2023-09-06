@@ -45,7 +45,6 @@ const useGeneratePass = () => {
   });
 
   const generateHandler = () => {
-    console.log(user);
     if (user) {
       mutation.mutate({ username: user.username, id: user.id });
     }
