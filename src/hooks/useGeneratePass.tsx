@@ -4,7 +4,7 @@ import useAuthStore from '@/store/AuthStore';
 import { userApi } from '@/utils/axios';
 
 const useGeneratePass = () => {
-  const [status, setStatus] = useState('Press button to generate token');
+  const [status, setStatus] = useState('버튼을 눌러 토큰을 발급받으세요');
   const [canGenerate, setCanGenerate] = useState(true);
   const { user } = useAuthStore();
 
@@ -22,7 +22,7 @@ const useGeneratePass = () => {
         setCanGenerate(false);
       } else {
         localStorage.removeItem('lastGeneratedPass');
-        setStatus('Press button to generate token');
+        setStatus('버튼을 눌러 토큰을 발급받으세요');
         setCanGenerate(true);
         return;
       }
