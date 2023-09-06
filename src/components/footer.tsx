@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BsDiscord, BsTwitter } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -8,11 +9,11 @@ const Footer = () => {
           IIDX<span className="text-primary">PASTAINFO</span>
         </Link>
         <div className="flex gap-4">
-          <Link href="/tweet" target="_blank">
-            트위터
+          <Link href="https://twitter.com/iidx_pastainfo" target="_blank">
+            <BsTwitter className="h-6 w-6" />
           </Link>
-          <Link href="/git" target="_blank">
-            깃헙
+          <Link href="https://discord.gg/6UAwubFP" target="_blank">
+            <BsDiscord className="h-6 w-6" />
           </Link>
         </div>
         <div className="flex flex-col opacity-50 text-xs">
@@ -40,11 +41,11 @@ const Footer = () => {
         >
           IIDX Official Website
         </Link>
-        <Link href="https://p.eagate.573.jp/" target="_blank">
-          e-amusement
-        </Link>
         <Link href="https://twitter.com/IIDX_OFFICIAL" target="_blank">
           IIDX Official Twitter
+        </Link>
+        <Link href="https://p.eagate.573.jp/" target="_blank">
+          e-amusement
         </Link>
         {/* <Link href="/D">D</Link> */}
       </div>
@@ -66,6 +67,12 @@ const Footer = () => {
         </Link> */}
         <Link href="https://iidx.org/" target="_blank">
           IIDX.org
+        </Link>
+        <Link
+          href="https://remywiki.com/Beatmania_IIDX_Information"
+          target="_blank"
+        >
+          RemyWiki
         </Link>
       </div>
     </footer>
