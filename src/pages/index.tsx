@@ -1,31 +1,41 @@
 import Link from 'next/link';
-
+import { Timeline } from 'react-twitter-widgets';
 
 export default function Home() {
-  /* 
-  @TODO 
-  메인 페이지에 들어갈 컴포넌트 제작
-  웰컴 컴포넌트 : 인삿말과 이용자 수
-  공지사항 컴포넌트 : Tweet wizet
-  문의사항
-  */
-
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-4">
         <h2 className="text-4xl text-center font-bold leading-normal">
-          성과를 포함한 IIDX 프로필을 만들어보세요
+          IIDX PASTAINFO에 오신 것을 환영합니다.
         </h2>
         <p className="text-xl text-center leading-relaxed">
-          IIDX PASTAINFO은 e-amusement의 IIDX 홈페이지에서 플레이 기록을 가져와,
-          프로필을 만들 수 있는 서비스입니다.
+          PASTAINFO는 Beatmania IIDX 시리즈의 악곡 데이터베이스와
+          e-amusement에서 제공하는 플레이 데이터를 기반으로, 서열표 및 프로필
+          생성 기능 등을 제공합니다.
         </p>
       </div>
       <div className="flex gap-4 justify-center">
         <div>
           <Link href="/signup" className="btn btn-primary">
-            Get Started
+            시작하기
           </Link>
+        </div>
+      </div>
+      <hr className="border-t border-gray-300 my-0" />
+      <div className="flex flex-col text-center gap-4 justify-center">
+        <h2 className='text-2xl text-bold'>공지사항</h2>
+        <div className='flex justify-center'>
+          <Timeline
+            dataSource={{
+              sourceType: 'url',
+              url: 'https://twitter.com/iidx_pastainfo',
+            }}
+            options={{
+              height: '400',
+              width: '600',
+              theme: 'dark',
+            }}
+          />
         </div>
       </div>
     </div>
