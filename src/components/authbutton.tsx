@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useAuthStore from '@/store/AuthStore';
+import useProfileStore from '@/store/ProfileDataStore';
 
 const Authbutton = () => {
   const router = useRouter();
   const { logout } = useAuthStore();
+  const { clear } = useProfileStore();
   const logoutHandler = () => {
     logout();
+    clear();
     router.push('/');
   };
   return (

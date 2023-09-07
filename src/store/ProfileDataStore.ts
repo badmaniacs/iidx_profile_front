@@ -5,6 +5,7 @@ import { Profile } from '@/gql/graphql';
 export interface ProfileState {
   profile: Profile | null;
   profileSet: (profileData: Profile) => void;
+  clear: () => void;
 }
 
 export type ProfileStatePersist = (
@@ -18,6 +19,9 @@ const useProfileStore = create<ProfileState>(
       profile: null,
       profileSet: (profileData: Profile) => {
         set({ profile: profileData });
+      },
+      clear: () => {
+        set({ profile: null });
       },
     }),
     {

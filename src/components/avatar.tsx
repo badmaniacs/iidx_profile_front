@@ -1,31 +1,47 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import useProfileStore from '@/store/ProfileDataStore';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import useAuthStore from '@/store/AuthStore';
 
 const Avatar = () => {
-  const { profile } = useProfileStore();
+  const { profile, clear } = useProfileStore();
   const qpro = profile?.qpro as string;
+  const router = useRouter();
+  const { logout } = useAuthStore();
+  const logoutHandler = () => {
+    logout();
+    clear();
+    router.push('/');
+  };
+
   return (
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          {/* <Image src={qpro} alt="" width="20" height="20" /> */}
+          {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
+          {profile ? (
+            <img src={qpro} alt="" width="20" height="20" />
+          ) : (
+            <div className="bg-white w-20 h-20" />
+          )}
         </div>
       </label>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52"
       >
         <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
+          <Link href="/tier">서열표</Link>
         </li>
         <li>
-          <a>Settings</a>
+          <Link href="/profile">프로필</Link>
         </li>
         <li>
-          <a>Logout</a>
+          <Link href="/update">업데이트</Link>
+        </li>
+        <li>
+          <button onClick={logoutHandler}>로그아웃</button>
         </li>
       </ul>
     </div>

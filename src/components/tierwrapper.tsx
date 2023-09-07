@@ -54,7 +54,7 @@ const TierWrapper: React.FC<TierWrapperProps> = ({ tier }) => {
           <div className="grid grid-cols-6">
             {filterdBytierSonglistEP.map((song) => (
               <Songcell
-                key={song.title}
+                key={song.title + song.difficulty}
                 title={song.title}
                 difficulty={song.difficulty}
                 playdata={playdata?.find(
@@ -78,7 +78,7 @@ const TierWrapper: React.FC<TierWrapperProps> = ({ tier }) => {
             <div className="grid grid-cols-6 ">
               {filterdBytierSonglistID.map((song) => (
                 <Songcell
-                  key={song.title}
+                  key={song.title + song.difficulty}
                   title={song.title}
                   difficulty={song.difficulty}
                   playdata={playdata?.find(
