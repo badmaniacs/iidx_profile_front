@@ -20,9 +20,11 @@ export const validateForm = (formData: FormValue): FormErrors => {
     passwordConfirmError: false,
   };
 
+  console.log(formData);
+
   const { username, email, password, passwordConfirm } = formData;
 
-  if (formData. username === null) {
+  if (formData.username === null) {
     return errors;
   }
 

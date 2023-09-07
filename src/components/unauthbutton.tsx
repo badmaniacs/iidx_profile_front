@@ -4,17 +4,17 @@ const Unauthbutton = () => {
   return (
     <>
       <li className="hidden md:block">
-        <Link className="btn btn-outline btn-sm" href="/signin">
-          Sign In
+        <Link className="" href="/signin">
+          로그인
         </Link>
       </li>
       <li className="hidden md:block">
         <Link
-          className="btn btn-neutral btn-sm"
+          className=""
           href="/signup"
           style={{ textDecoration: 'none' }}
         >
-          Create Account
+          회원가입
         </Link>
       </li>
     </>

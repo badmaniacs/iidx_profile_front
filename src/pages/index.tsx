@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { Timeline } from 'react-twitter-widgets';
+import useAuthStore from '@/store/AuthStore';
 
 export default function Home() {
+  const { isLoggedIn } = useAuthStore();
+
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-4">
@@ -15,16 +18,18 @@ export default function Home() {
         </p>
       </div>
       <div className="flex gap-4 justify-center">
-        <div>
-          <Link href="/signup" className="btn btn-primary">
-            시작하기
-          </Link>
-        </div>
+        {!isLoggedIn && (
+          <div>
+            <Link href="/signup" className="btn btn-primary">
+              시작하기
+            </Link>
+          </div>
+        )}
       </div>
       <hr className="border-t border-gray-300 my-0" />
       <div className="flex flex-col text-center gap-4 justify-center">
-        <h2 className='text-2xl text-bold'>공지사항</h2>
-        <div className='flex justify-center'>
+        <h2 className="text-2xl text-bold">공지사항</h2>
+        <div className="flex justify-center">
           <Timeline
             dataSource={{
               sourceType: 'url',

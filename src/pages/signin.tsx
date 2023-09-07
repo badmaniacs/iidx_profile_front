@@ -3,9 +3,11 @@ import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import useGetProfile from '@/hooks/useUpdateProfile';
+import ErrorMessage from '@/components/errormessage';
 
 const Signin = () => {
-  const { loginMutation } = useLoginUser();
+  const { loginMutation, loginError } = useLoginUser();
+
   const [login] = useAuthStore((state) => [state.login]);
   const { initialUpdateHandler } = useGetProfile();
   const router = useRouter();
@@ -20,7 +22,7 @@ const Signin = () => {
       username: newFormData.get('username') as string,
       password: newFormData.get('password') as string,
     });
-    if (user) {
+    if (user.data.LoginUser) {
       login(user.data.LoginUser);
       initialUpdateHandler(user.data.LoginUser.id);
       router.push('/');
@@ -33,12 +35,18 @@ const Signin = () => {
         <div className="flex flex-col gap-2">
           <input type="text" name="username" placeholder="ID" />
           <input type="password" name="password" placeholder="Password" />
-          <Link
+          {/* <Link
             href="/forgot-password"
             className="text-center text-xs hover:underline opacity-50"
           >
             Forgot your password?
-          </Link>
+          </Link> */}
+        </div>
+        <div>
+          <ErrorMessage
+            condition={loginError}
+            message="유효하지 않은 계정입니다."
+          />
         </div>
         <div className="flex flex-col gap-2">
           <button className="btn flex gap-2 btn-primary">Sign In</button>
