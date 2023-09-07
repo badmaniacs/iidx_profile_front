@@ -59,7 +59,7 @@ const Update = () => {
             최근의 기록을 홈페이지로 가져옵니다.
           </p>
         </div>
-        <p>마지막으로 가져온 데이터 : {kstDate} 생성됨.</p>
+        <p>마지막으로 가져온 데이터 : {profile ? `${kstDate} 생성됨.` : `없음`}</p>
         <div className="flex flex-row justify-center">
           <button className="btn btn-primary w-[25%]" onClick={updateHandler}>
             최신화하기
