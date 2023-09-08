@@ -27,8 +27,8 @@ const Lamp: React.FC<LampProps> = ({ cleartype }) => {
     case 'FAILED':
       className += ' bg-failed';
       break;
-    case 'NO_PLAY':
-      className = '';
+    case '':
+      return <div></div>
       break;
   }
 

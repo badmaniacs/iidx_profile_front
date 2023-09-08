@@ -22,10 +22,13 @@
       blue,
       indigo,
       violet
-    ); 
-    -webkit-background-clip: text; 
-    color: transparent; 
+    );
+    -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.2px white; 
+    -webkit-text-stroke: 0.2px white;
+  }
+  .font-outline-black {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
   }
 }
