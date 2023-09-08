@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  img {
+    @apply inline-block;
+  }
   .font-outline-bronze {
     -webkit-text-stroke: 0.5px rgb(205 127 50);
   }

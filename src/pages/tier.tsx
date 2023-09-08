@@ -2,9 +2,11 @@ import TierWrapper from '@/components/tierwrapper';
 import useProfileStore from '@/store/ProfileDataStore';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Cleartypecounter from '@/components/cleartypecounter';
+import { RiScreenshot2Fill } from 'react-icons/ri';
+import { captureComponent } from '@/utils/screenshot';
 
 const tierList = [
   'S+',
@@ -25,8 +27,13 @@ const Tier = () => {
   const { isLoggedIn } = useAuthStore();
   const router = useRouter();
   const djName = profile?.djName;
-  const iidxId = profile?.iidxId
+  const iidxId = profile?.iidxId;
   const musicDataSp = profile?.musicData.SP;
+  const captureRef = useRef<HTMLDivElement>(null);
+
+  const handleCapture = async () => {
+    await captureComponent(captureRef);
+  };
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -36,7 +43,7 @@ const Tier = () => {
 
   return (
     <div className="flex flex-col gap-16">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" ref={captureRef}>
         {!profile && (
           <>
             <div className="flex justify-center items-center">
@@ -56,10 +63,12 @@ const Tier = () => {
           <h2 className="text-center text-2xl">
             IIDX SP LEVEL 12 HARD GAUGE RANK TABLE
           </h2>
-          <br />
-          <div className='flex flex-row justify-between'>
+          <RiScreenshot2Fill onClick={handleCapture} className="h-10 w-10 ml-auto hover:cursor-pointer" />
+          <div className="flex flex-row justify-between">
             {musicDataSp && <Cleartypecounter musicData={musicDataSp} />}
-            <p className="text-right">DJ {djName}({iidxId})</p>
+            <p className="text-right">
+              DJ {djName}({iidxId})
+            </p>
           </div>
         </div>
         <div className="">
