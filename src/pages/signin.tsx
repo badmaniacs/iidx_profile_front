@@ -37,11 +37,21 @@ const Signin = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-full gap-8">
-      <h2 className="text-2xl font-bold">Sign in</h2>
-      <form className="flex flex-col gap-8 w-80" onSubmit={signinSubmitHandler}>
+      <h2 className="text-2xl font-bold">로그인</h2>
+      <form className="flex flex-col gap-3 w-80" onSubmit={signinSubmitHandler}>
         <div className="flex flex-col gap-2">
-          <input type="text" name="username" placeholder="ID" />
-          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="text"
+            name="username"
+            placeholder="ID"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+          />
           {/* <Link
             href="/forgot-password"
             className="text-center text-xs hover:underline opacity-50"
@@ -52,13 +62,13 @@ const Signin = () => {
         <div>
           <ErrorMessage
             condition={loginError}
-            message="유효하지 않은 계정입니다."
+            message="로그인 실패. 아이디/비밀번호를 확인해주세요."
           />
         </div>
         <div className="flex flex-col gap-2">
-          <button className="btn flex gap-2 btn-primary">Sign In</button>
+          <button className="btn flex gap-2 btn-primary">로그인</button>
           <span>
-            Don&apos;t have an account? <Link href="/signup">Sign Up</Link>{' '}
+            계정이 없나요? <Link className='text-primary hover:underline' href="/signup">회원가입</Link>{' '}
           </span>
         </div>
       </form>

@@ -18,6 +18,10 @@ module.exports = {
       eclear: 'rgb(101 205 49)',
       aclear: 'rgb(165 129 241)',
       failed: 'rgb(153 153 153)',
+      bule: 'rgb(30 144 255)',
+      gray: 'rgb(17 24 39)',
+      lgray: 'rgb(209 213 219)',
+      red: 'rgb(239 68 68)'
     },
   },
   plugins: [require('daisyui')],

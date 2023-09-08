@@ -64,15 +64,31 @@ const Signup = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-full gap-8">
       <h2 className="text-2xl font-bold">회원가입</h2>
-      <form className="flex flex-col gap-8 w-80" onSubmit={signupSubmitHandler}>
+      <form className="flex flex-col gap-4 w-80" onSubmit={signupSubmitHandler}>
         <div className="flex flex-col gap-2">
-          <input type="text" name="username" placeholder="ID" />
-          <input type="text" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="text"
+            name="username"
+            placeholder="ID"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+          />
           <input
             type="password"
             name="passwordConfirm"
             placeholder="Password (Again)"
+            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -98,7 +114,7 @@ const Signup = () => {
         <div className="flex flex-col gap-2">
           <button className="btn flex gap-2 btn-primary">회원가입</button>
           <span>
-            이미 계정이 있으시다면 <Link href="/signin">로그인</Link>
+            이미 계정이 있으시다면 <Link href="/signin" className='text-primary hover:underline'>로그인</Link>
           </span>
         </div>
       </form>

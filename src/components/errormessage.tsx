@@ -7,7 +7,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   condition,
   message,
 }) => {
-  return condition ? <p className="text-red-500">{message}</p> : null;
+  return condition ? <p className="text-red">{message}</p> : null;
 };
 
 export default ErrorMessage
