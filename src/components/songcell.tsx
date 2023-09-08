@@ -1,6 +1,8 @@
 import { Music } from '@/gql/graphql';
 import { rankParser } from '@/utils/rankParser';
 import Lamp from './lamp';
+import { useEffect } from 'react';
+import Coloredscore from './coloredscore';
 
 interface songTier {
   title: string;
@@ -9,6 +11,7 @@ interface songTier {
   hard?: string;
   version?: string;
   playdata?: Music;
+  clearCheck?: (item: number) => void;
 }
 
 const Songcell: React.FC<songTier> = (song: songTier) => {
@@ -25,6 +28,33 @@ const Songcell: React.FC<songTier> = (song: songTier) => {
       );
     }
   }
+  let clearTypeToNumber = 0;
+  switch (song.playdata?.clear_type) {
+    case 'E-CLEAR':
+      clearTypeToNumber = 1;
+      break;
+    case 'CLEAR':
+      clearTypeToNumber = 2;
+      break;
+    case 'H-CLEAR':
+      clearTypeToNumber = 3;
+      break;
+    case 'EXH-CLEAR':
+      clearTypeToNumber = 4;
+      break;
+    case 'F-COMBO':
+      clearTypeToNumber = 5;
+      break;
+    default:
+      clearTypeToNumber = 0;
+  }
+
+  useEffect(() => {
+    if (song.clearCheck) {
+      song.clearCheck(clearTypeToNumber);
+    }
+  }, []);
+
   return (
     <div className="border-b border-r border-gray-100 p-0 m-0 flex flex-col ">
       <div className="flex flex-row grow">
@@ -37,11 +67,16 @@ const Songcell: React.FC<songTier> = (song: songTier) => {
               : song.title + '[H]'}
           </span>
           <div className="mt-auto ">
-            {parsedScore
-              ? `${parsedScore.scoreConversion}(${score})`
-              : score === 0
-              ? <br/>
-              : score}
+            {parsedScore ? (
+              <Coloredscore
+                scoreConversion={parsedScore.scoreConversion}
+                score={score as number}
+              />
+            ) : score === 0 ? (
+              <br />
+            ) : (
+              score
+            )}
           </div>
         </div>
         {song.playdata && <Lamp cleartype={song.playdata?.clear_type} />}

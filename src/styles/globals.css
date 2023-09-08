@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .font-outline-bronze {
+    -webkit-text-stroke: 0.5px rgb(205 127 50);
+  }
+  .font-outline-silver {
+    -webkit-text-stroke: 0.5px rgb(229 228 226);
+  }
+  .font-outline-gold {
+    -webkit-text-stroke: 0.5px rgb(255, 215, 0);
+  }
+  .font-outline-rainbow {
+    background-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    ); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.2px white; 
+  }
+}

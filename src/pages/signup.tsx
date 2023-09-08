@@ -5,6 +5,7 @@ import useSignupValidation from '@/hooks/useSignupValidation';
 import { useRouter } from 'next/router';
 import useAuthStore from '@/store/AuthStore';
 import useLoginUser from '@/hooks/useLoginUser';
+import { useEffect } from 'react';
 
 const Signup = () => {
   const { createUser, usernameDupError, emailDupError } = useCreateUser();
@@ -16,9 +17,15 @@ const Signup = () => {
     validateAll,
   } = useSignupValidation();
 
-  const { loginMutation, loginError } = useLoginUser();
-  const [login] = useAuthStore((state) => [state.login]);
+  const { loginMutation } = useLoginUser();
+  const { login, isLoggedIn } = useAuthStore();
   const router = useRouter();
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push('/');
+    }
+  }, [isLoggedIn, router]);
 
   const signupSubmitHandler = async (
     event: React.FormEvent<HTMLFormElement>,

@@ -4,13 +4,20 @@ import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import useGetProfile from '@/hooks/useUpdateProfile';
 import ErrorMessage from '@/components/errormessage';
+import { useEffect } from 'react';
 
 const Signin = () => {
   const { loginMutation, loginError } = useLoginUser();
 
-  const [login] = useAuthStore((state) => [state.login]);
+  const { login, isLoggedIn } = useAuthStore();
   const { initialUpdateHandler } = useGetProfile();
   const router = useRouter();
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push('/');
+    }
+  }, [isLoggedIn, router]);
 
   const signinSubmitHandler = async (
     event: React.FormEvent<HTMLFormElement>,

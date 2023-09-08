@@ -7,25 +7,25 @@ const Lamp: React.FC<LampProps> = ({ cleartype }) => {
 
   switch (cleartype) {
     case 'F-COMBO':
-      className += ' bg-skyblue bg-yellow bg-white';
+      className += ' bg-fcombo';
       break;
     case 'EXH-CLEAR':
-      className += ' bg-yellow bg-red';
+      className += ' bg-exhhard';
       break;
     case 'H-CLEAR':
-      className += ' bg-white';
+      className += ' bg-hard';
       break;
     case 'CLEAR':
-      className += ' bg-skyblue';
+      className += ' bg-clear';
       break;
     case 'E-CLEAR':
-      className += ' bg-lime';
+      className += ' bg-eclear';
       break;
     case 'A-CLEAR':
-      className += ' bg-purple';
+      className += ' bg-aclear';
       break;
     case 'FAILED':
-      className += ' bg-black';
+      className += ' bg-failed';
       break;
     case 'NO_PLAY':
       className = '';

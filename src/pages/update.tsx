@@ -2,14 +2,26 @@ import useGeneratePass from '@/hooks/useGeneratePass';
 import useGetProfile from '@/hooks/useUpdateProfile';
 import useProfileStore from '@/store/ProfileDataStore';
 import Link from 'next/link';
+import useAuthStore from '@/store/AuthStore';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const Update = () => {
   const { generateHandler, status, canGenerate } = useGeneratePass();
   const { updateHandler } = useGetProfile();
   const { profile } = useProfileStore();
+  const { isLoggedIn } = useAuthStore();
+  const router = useRouter();
+
   const kstDate = new Date(profile?.createAt).toLocaleString('ko-KR', {
     timeZone: 'Asia/Seoul',
   });
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.push('/signin');
+    }
+  }, [isLoggedIn, router]);
 
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-16">
@@ -59,7 +71,9 @@ const Update = () => {
             최근의 기록을 홈페이지로 가져옵니다.
           </p>
         </div>
-        <p>마지막으로 가져온 데이터 : {profile ? `${kstDate} 생성됨.` : `없음`}</p>
+        <p>
+          마지막으로 가져온 데이터 : {profile ? `${kstDate} 생성됨.` : `없음`}
+        </p>
         <div className="flex flex-row justify-center">
           <button className="btn btn-primary w-[25%]" onClick={updateHandler}>
             최신화하기

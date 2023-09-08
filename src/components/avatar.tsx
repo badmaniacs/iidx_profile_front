@@ -9,10 +9,10 @@ const Avatar = () => {
   const qpro = profile?.qpro as string;
   const router = useRouter();
   const { logout } = useAuthStore();
-  const logoutHandler = () => {
+  const logoutHandler = async () => {
+    await router.push('/');
     logout();
     clear();
-    router.push('/');
   };
 
   return (
@@ -21,7 +21,9 @@ const Avatar = () => {
         <div className="w-10 rounded-full">
           {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
           {profile ? (
-            <img src={qpro} alt="" width="20" height="20" />
+            <picture>
+              <img src={qpro} alt="" width="20" height="20" />
+            </picture>
           ) : (
             <div className="bg-white w-20 h-20" />
           )}

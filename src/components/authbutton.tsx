@@ -7,10 +7,10 @@ const Authbutton = () => {
   const router = useRouter();
   const { logout } = useAuthStore();
   const { clear } = useProfileStore();
-  const logoutHandler = () => {
+  const logoutHandler = async () => {
+    await router.push('/');
     logout();
     clear();
-    router.push('/');
   };
   return (
     <>
