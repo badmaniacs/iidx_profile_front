@@ -28,7 +28,7 @@ class UserApi {
 
   constructor() {
     this.client = axios.create({
-      baseURL: `/users`,
+      baseURL: `${process.env.SERVER_URL}/users`,
     });
   }
 
