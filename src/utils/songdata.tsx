@@ -4537,7 +4537,7 @@ export const songdata: SongData = {
   Idola: ['idola', 0, 0, 621, 1181, 1826, 0, 0, 655, 1237, 1873, 0],
   If: ['ifpaslam', 0, 0, 398, 689, 959, 0, 0, 394, 690, 969, 0],
   iFUTURELIST: ['ifuture', 0, 145, 354, 585, 854, 0, 0, 352, 573, 0, 0],
-  'Ignis†Iræ': ['ignisira', 0, 0, 558, 1243, 1970, 0, 0, 571, 1219, 1968, 0],
+  'Ignis†Irae': ['ignisira', 0, 0, 558, 1243, 1970, 0, 0, 571, 1219, 1968, 0],
   IIDX: ['iidx', 0, 244, 283, 428, 550, 0, 0, 283, 428, 550, 0],
   'IIDX RED Ending (Ryu☆Remix)': [
     'iiredryu',

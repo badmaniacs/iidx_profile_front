@@ -6,7 +6,7 @@ class GraphqlApi {
 
   constructor() {
     this.client = axios.create({
-      baseURL: 'http://localhost:3000/graphql',
+      baseURL: `/graphql`,
     });
   }
 
@@ -28,7 +28,7 @@ class UserApi {
 
   constructor() {
     this.client = axios.create({
-      baseURL: 'http://localhost:3000/users',
+      baseURL: `/users`,
     });
   }
 

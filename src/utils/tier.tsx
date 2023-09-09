@@ -1071,7 +1071,7 @@ export const tierData = [
     version: '21',
   },
   {
-    title: 'Ignis†Iræ',
+    title: 'Ignis†Irae',
     difficulty: 'ANOTHER',
     normal: 'ep A+',
     hard: 'ep S',
