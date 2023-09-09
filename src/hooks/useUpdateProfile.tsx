@@ -92,7 +92,8 @@ const useGetProfile = () => {
 
   return {
     updateHandler,
-    initialUpdateHandler
+    initialUpdateHandler,
+    updateMutation: mutation,
   };
 };
 

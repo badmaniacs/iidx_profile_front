@@ -5,10 +5,12 @@ import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Spinner from '@/components/spinner';
 
 const Update = () => {
-  const { generateHandler, status, canGenerate } = useGeneratePass();
-  const { updateHandler } = useGetProfile();
+  const { generateHandler, status, canGenerate, passMutation } =
+    useGeneratePass();
+  const { updateHandler, updateMutation } = useGetProfile();
   const { profile } = useProfileStore();
   const { isLoggedIn } = useAuthStore();
   const router = useRouter();
@@ -25,6 +27,8 @@ const Update = () => {
 
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 gap-16">
+      {updateMutation.isLoading && <Spinner />}
+      {passMutation.isLoading && <Spinner />}
       <div className="col-span-2 flex flex-col gap-8">
         <h2 className="text-2xl font-bold svelte-1vnrqhj">
           개인용 업데이터 토큰
@@ -53,8 +57,10 @@ const Update = () => {
         <div className="flex flex-col gap-4">
           <span>
             토큰을 발급 받은 후에{` `}
-            <Link href="https://p.eagate.573.jp/" className='text-primary'>e-amusement</Link>에
-            접속합니다.
+            <Link href="https://p.eagate.573.jp/" className="text-primary">
+              e-amusement
+            </Link>
+            에 접속합니다.
           </span>
           <div className="bg-bbblack bg-opacity-50 p-4">
             javascript:$.getScript(&quot;https://iidxdatascraper.s3.ap-northeast-2.amazonaws.com/bundle.js&quot;)
@@ -88,9 +94,7 @@ const Update = () => {
         <h2 className="text-2xl font-bold">주의사항</h2>
         <br />
         <div className="bg-bbblack bg-opacity-50 p-4">
-          <p>
-            베이직 코스에 가입 된 계정만 이용할 수 있습니다.
-          </p>
+          <p>베이직 코스에 가입 된 계정만 이용할 수 있습니다.</p>
           <br />
           <p>
             토큰은 30분에 한 번 발급 가능하며 갱신이 완료되면 더이상 사용할 수
