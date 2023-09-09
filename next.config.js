@@ -7,8 +7,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path',
-        destination: `${process.env.SERVER_URL}/:path*`,
+        source: '/graphql',
+        destination: `${process.env.SERVER_URL}/graphql`,
         permanent: true,
       },
       {
