@@ -12,7 +12,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: 'users/:path',
+        source: '/users/:path',
         destination: `${process.env.SERVER_URL}/users/:path*`,
         permanent: true,
       },
