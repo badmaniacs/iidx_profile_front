@@ -15,7 +15,7 @@ const useSignupValidation = () => {
     useState<boolean>(false);
 
   const validateUsername = (username: string): boolean => {
-    const usernameRegex = /^[a-zA-Z0-9]{4,15}$/;
+    const usernameRegex = /^[a-z0-9]{4,15}$/;
     const isValid = username.match(usernameRegex) !== null;
     setUsernameError(!isValid);
     return isValid;

@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import useGetProfile from '@/hooks/useUpdateProfile';
 import ErrorMessage from '@/components/errormessage';
 import { useEffect } from 'react';
+import Spinner from '@/components/spinner';
 
 const Signin = () => {
   const { loginMutation, loginError } = useLoginUser();
@@ -37,6 +38,7 @@ const Signin = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center min-h-full gap-8">
+      {loginMutation.isLoading && <Spinner />}
       <h2 className="text-2xl font-bold">로그인</h2>
       <form className="flex flex-col gap-3 w-80" onSubmit={signinSubmitHandler}>
         <div className="flex flex-col gap-2">
@@ -68,7 +70,10 @@ const Signin = () => {
         <div className="flex flex-col gap-2">
           <button className="btn flex gap-2 btn-primary">로그인</button>
           <span>
-            계정이 없나요? <Link className='text-primary hover:underline' href="/signup">회원가입</Link>{' '}
+            계정이 없나요?{' '}
+            <Link className="text-primary hover:underline" href="/signup">
+              회원가입
+            </Link>{' '}
           </span>
         </div>
       </form>

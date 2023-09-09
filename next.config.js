@@ -11,6 +11,11 @@ const nextConfig = {
         destination: `${process.env.SERVER_URL}/:path*`,
         permanent: true,
       },
+      {
+        source: '/users/:path',
+        destination: `${process.env.SERVER_URL}/users/:path*`,
+        permanent: true,
+      },
     ];
   },
 };

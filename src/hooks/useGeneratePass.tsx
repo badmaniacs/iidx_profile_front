@@ -54,6 +54,7 @@ const useGeneratePass = () => {
     generateHandler,
     status,
     canGenerate,
+    passMutation: mutation
   };
 };
 
