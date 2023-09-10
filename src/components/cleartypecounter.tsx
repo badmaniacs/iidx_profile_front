@@ -26,7 +26,9 @@ const Cleartypecounter: React.FC<CleartypecounterProps> = ({ musicData }) => {
   const totalSongs = tierData.length;
 
   const noplayCount =
-    totalSongs - clearTypeCounts.reduce((acc, count) => acc + count, 0);
+    totalSongs - clearTypeCounts.reduce((acc, count) => acc + count, 0) < 0
+      ? 0
+      : totalSongs - clearTypeCounts.reduce((acc, count) => acc + count, 0);
 
   const percentage = clearTypeCounts.map((count) => (count / totalSongs) * 100);
 

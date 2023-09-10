@@ -379,7 +379,7 @@ export const songdata: SongData = {
     1227,
     0,
   ],
-  'Anisakis-somatic mutation type "Forza"-': [
+  'Anisakis -somatic mutation type\"Forza\"-': [
     'anisakis',
     314,
     256,
