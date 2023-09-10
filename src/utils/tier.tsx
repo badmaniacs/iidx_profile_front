@@ -2996,7 +2996,7 @@ export const tierData = [
     version: '13',
   },
   {
-    title: 'Χ-DEN',
+    title: 'X-DEN',
     difficulty: 'ANOTHER',
     normal: 'ep S',
     hard: 'ep S+',
