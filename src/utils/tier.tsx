@@ -843,7 +843,7 @@ export const tierData = [
     title: 'four pieces of heaven',
     difficulty: 'LEGGENDARIA',
     normal: '',
-    hard: '',
+    hard: 'ep A+',
     version: '15',
   },
   {
@@ -1389,7 +1389,7 @@ export const tierData = [
     title: 'MAX 300',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'id B+',
     version: '7',
   },
   {
@@ -2082,7 +2082,7 @@ export const tierData = [
     title: 'Somnidiscotheque',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep S+',
     version: '30',
   },
   {
@@ -2278,7 +2278,7 @@ export const tierData = [
     title: 'The Limbo',
     difficulty: 'LEGGENDARIA',
     normal: 'ep S+',
-    hard: 'ep S',
+    hard: 'ep S+',
     version: '19',
   },
   {
@@ -2628,7 +2628,7 @@ export const tierData = [
     title: 'Xerulean',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'S',
     version: '30',
   },
   {
@@ -2908,7 +2908,7 @@ export const tierData = [
     title: '神のシナリオ',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'id C',
     version: '30',
   },
   {
@@ -3461,7 +3461,7 @@ export const tierData = [
     title: 'ぞうしょく！？マイデンティティ',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'B+',
     version: '30',
   },
 ];

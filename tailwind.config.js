@@ -23,6 +23,7 @@ module.exports = {
       gray: 'rgb(17 24 39)',
       lgray: 'rgb(209 213 219)',
       red: 'rgb(239 68 68)',
+      primary: 'rgb(24 24 27)',
     },
   },
   plugins: [require('daisyui')],
