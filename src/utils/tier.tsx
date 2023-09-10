@@ -3437,7 +3437,7 @@ export const tierData = [
     version: '27',
   },
   {
-    title: '"ワルツ第17番 ト短調”大犬のワルツ”',
+    title: 'ワルツ第17番 ト短調”大犬のワルツ”',
     difficulty: 'ANOTHER',
     normal: 'id D',
     hard: 'id B',
