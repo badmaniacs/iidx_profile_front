@@ -112,7 +112,7 @@ export const tierData = [
     version: '29',
   },
   {
-    title: 'Anisakis-somatic mutation type "Forza"-',
+    title: 'Anisakis -somatic mutation type\"Forza\"-',
     difficulty: 'LEGGENDARIA',
     normal: 'ep A+',
     hard: 'ep A+',
