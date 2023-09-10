@@ -434,7 +434,7 @@ export const tierData = [
     version: '16',
   },
   {
-    title: 'Colors(radio edit)',
+    title: 'Colors (radio edit)',
     difficulty: 'ANOTHER',
     normal: 'ep E',
     hard: 'ep C',
@@ -518,7 +518,7 @@ export const tierData = [
     version: '25',
   },
   {
-    title: 'DEATH†ZIGOQ～怒りの高速爆走野郎～',
+    title: 'DEATH†ZIGOQ ～怒りの高速爆走野郎～',
     difficulty: 'ANOTHER',
     normal: 'ep A',
     hard: 'ep A+',
@@ -1358,7 +1358,7 @@ export const tierData = [
     version: '23',
   },
   {
-    title: 'Mächö Mönky',
+    title: 'Macho Monky',
     difficulty: 'ANOTHER',
     normal: 'ep B+',
     hard: 'ep A',
@@ -1477,7 +1477,7 @@ export const tierData = [
     version: '18',
   },
   {
-    title: 'NEW GENERATION-もう、お前しか見えない-',
+    title: 'NEW GENERATION -もう、お前しか見えない-',
     difficulty: 'LEGGENDARIA',
     normal: 'ep B+',
     hard: 'ep A',
@@ -1610,7 +1610,7 @@ export const tierData = [
     version: '15',
   },
   {
-    title: 'Pārvatī',
+    title: 'Parvati',
     difficulty: 'ANOTHER',
     normal: 'ep E',
     hard: 'ep D',
@@ -1855,7 +1855,7 @@ export const tierData = [
     version: '25',
   },
   {
-    title: 'RINИE',
+    title: 'RINNE',
     difficulty: 'ANOTHER',
     normal: 'ep C',
     hard: 'ep C',
@@ -1953,7 +1953,7 @@ export const tierData = [
     version: '14',
   },
   {
-    title: 'Session 9-Chronicles-',
+    title: 'Session 9 -Chronicles-',
     difficulty: 'ANOTHER',
     normal: 'ep B',
     hard: 'ep B+',
@@ -2352,7 +2352,7 @@ export const tierData = [
     version: '20',
   },
   {
-    title: 'Timepiece phase II(CN Ver.)',
+    title: 'Timepiece phase II (CN Ver.)',
     difficulty: 'ANOTHER',
     normal: 'id S',
     hard: 'id S+',
@@ -2450,7 +2450,7 @@ export const tierData = [
     version: '12',
   },
   {
-    title: 'Übertreffen',
+    title: 'Ubertreffen',
     difficulty: 'LEGGENDARIA',
     normal: 'ep B',
     hard: 'ep B+',
@@ -2590,7 +2590,7 @@ export const tierData = [
     version: '13',
   },
   {
-    title: "We're so Happy(P*Light Remix) IIDX ver.",
+    title: "We're so Happy (P*Light Remix) IIDX ver.",
     difficulty: 'ANOTHER',
     normal: 'ep C',
     hard: 'ep B+',
@@ -2632,7 +2632,7 @@ export const tierData = [
     version: '30',
   },
   {
-    title: 'Xlø',
+    title: 'Xlo',
     difficulty: 'ANOTHER',
     normal: 'ep B',
     hard: 'ep A',
@@ -2898,7 +2898,7 @@ export const tierData = [
     version: '16',
   },
   {
-    title: 'がっつり陰キャ!?怪盗いいんちょの億劫^^;',
+    title: 'がっつり陰キャ!? 怪盗いいんちょの億劫^^;',
     difficulty: 'ANOTHER',
     normal: 'ep A+',
     hard: 'ep A+',
@@ -2926,7 +2926,7 @@ export const tierData = [
     version: '30',
   },
   {
-    title: '華爛漫-Flowers-',
+    title: '華爛漫 -Flowers-',
     difficulty: 'LEGGENDARIA',
     normal: 'ep C',
     hard: 'ep C',
@@ -2940,7 +2940,7 @@ export const tierData = [
     version: '29',
   },
   {
-    title: '焱影',
+    title: '火影',
     difficulty: 'ANOTHER',
     normal: 'id B+',
     hard: 'id B+',
@@ -2968,7 +2968,7 @@ export const tierData = [
     version: '20',
   },
   {
-    title: '表裏一体!?怪盗いいんちょの悩み♥',
+    title: '表裏一体！？怪盗いいんちょの悩み',
     difficulty: 'ANOTHER',
     normal: 'ep D',
     hard: 'ep C',
@@ -3017,7 +3017,7 @@ export const tierData = [
     version: '19',
   },
   {
-    title: '恋する☆宇宙戦争っ!!',
+    title: '恋する☆宇宙戦争っ！！',
     difficulty: 'ANOTHER',
     normal: 'ep D',
     hard: 'ep C',
@@ -3045,7 +3045,7 @@ export const tierData = [
     version: '20',
   },
   {
-    title: 'キャトられ♥恋はモ～モク',
+    title: 'キャトられ恋はモ～モク',
     difficulty: 'ANOTHER',
     normal: 'ep B+',
     hard: 'ep A',
@@ -3066,7 +3066,7 @@ export const tierData = [
     version: '24',
   },
   {
-    title: 'ピアノ独奏無言歌 "灰燼"',
+    title: 'ピアノ独奏無言歌 \"灰燼\"',
     difficulty: 'ANOTHER',
     normal: 'id A+',
     hard: 'id S',
@@ -3136,7 +3136,7 @@ export const tierData = [
     version: '29',
   },
   {
-    title: 'ミラージュ･レジデンス',
+    title: 'ミラージュ・レジデンス',
     difficulty: 'LEGGENDARIA',
     normal: 'id B',
     hard: 'id B+',
@@ -3178,14 +3178,14 @@ export const tierData = [
     version: '20',
   },
   {
-    title: 'ピアノ協奏曲第1番"蠍火"',
+    title: 'ピアノ協奏曲第１番”蠍火”',
     difficulty: 'ANOTHER',
     normal: 'id A',
     hard: 'id A',
     version: '11',
   },
   {
-    title: 'ピアノ協奏曲第1番"蠍火" (BlackY Remix)',
+    title: 'ピアノ協奏曲第1番”蠍火” (BlackY Remix)',
     difficulty: 'ANOTHER',
     normal: 'ep A',
     hard: 'ep A',
@@ -3199,7 +3199,7 @@ export const tierData = [
     version: '28',
   },
   {
-    title: '恋愛=精度×認識力',
+    title: '恋愛＝精度×認識力',
     difficulty: 'ANOTHER',
     normal: 'ep C',
     hard: 'id A',
@@ -3255,7 +3255,7 @@ export const tierData = [
     version: '22',
   },
   {
-    title: '旋律のドグマ～Misérables～',
+    title: '旋律のドグマ～Miserables～',
     difficulty: 'ANOTHER',
     normal: 'ep C',
     hard: 'ep C',
@@ -3381,7 +3381,7 @@ export const tierData = [
     version: '21',
   },
   {
-    title: 'Ōu Legends',
+    title: 'Ou Legends',
     difficulty: 'ANOTHER',
     normal: 'ep C',
     hard: 'ep C',
@@ -3437,7 +3437,7 @@ export const tierData = [
     version: '27',
   },
   {
-    title: 'ワルツ第17番 ト短調"大犬のワルツ"',
+    title: '"ワルツ第17番 ト短調”大犬のワルツ”',
     difficulty: 'ANOTHER',
     normal: 'id D',
     hard: 'id B',

@@ -1890,7 +1890,7 @@ export const songdata: SongData = {
     1811,
     0,
   ],
-  'Colors(radio edit)': [
+  'Colors (radio edit)': [
     'colors',
     428,
     325,
@@ -2222,7 +2222,7 @@ export const songdata: SongData = {
   ],
   DEADHEAT: ['deadheat', 0, 0, 606, 1066, 1721, 0, 0, 611, 1074, 1757, 0],
   Deadline: ['deadline', 0, 286, 335, 626, 831, 0, 0, 509, 953, 1267, 0],
-  'DEATH†ZIGOQ～怒りの高速爆走野郎～': [
+  'DEATH†ZIGOQ ～怒りの高速爆走野郎～': [
     'dthzigoq',
     0,
     0,
@@ -5837,7 +5837,7 @@ export const songdata: SongData = {
     0,
   ],
   'Macho Gang': ['macho', 0, 0, 191, 548, 837, 0, 0, 262, 836, 846, 0],
-  'Mächö Mönky': ['machomnk', 0, 0, 754, 1123, 1588, 0, 0, 643, 1100, 1522, 0],
+  'Macho Monky': ['machomnk', 0, 0, 754, 1123, 1588, 0, 0, 643, 1100, 1522, 0],
   Macuilxochitl: ['macuil', 0, 267, 752, 1147, 1677, 0, 0, 768, 1042, 1546, 0],
   'MAD ATTACK': ['madatack', 0, 0, 348, 683, 991, 0, 0, 383, 719, 1136, 0],
   madrugada: ['mdrugd25', 0, 0, 363, 631, 945, 0, 0, 319, 623, 942, 0],
@@ -6488,7 +6488,7 @@ export const songdata: SongData = {
     1461,
     0,
   ],
-  'NEW GENERATION-もう、お前しか見えない-': [
+  'NEW GENERATION -もう、お前しか見えない-': [
     'new_gene',
     0,
     326,
@@ -7031,7 +7031,7 @@ export const songdata: SongData = {
   ],
   'Particle Arts': ['ptclarts', 0, 0, 451, 844, 1266, 0, 0, 493, 885, 1335, 0],
   'Party Starter': ['ptystart', 0, 0, 502, 780, 1170, 0, 0, 501, 819, 1139, 0],
-  Pārvatī: ['parvati', 0, 0, 523, 940, 1467, 0, 0, 529, 948, 1430, 0],
+  Parvati: ['parvati', 0, 0, 523, 940, 1467, 0, 0, 529, 948, 1430, 0],
   'passionate fate': [
     'passfate',
     0,
@@ -8007,7 +8007,7 @@ export const songdata: SongData = {
     0,
   ],
   'Right Now': ['rightnow', 0, 0, 390, 528, 552, 0, 0, 406, 510, 549, 0],
-  RINИE: ['rinne', 0, 0, 604, 1186, 1788, 0, 0, 604, 1172, 1767, 0],
+  RINNE: ['rinne', 0, 0, 604, 1186, 1788, 0, 0, 604, 1172, 1767, 0],
   RISE: ['rise_pd', 0, 0, 480, 701, 951, 0, 0, 496, 732, 1038, 0],
   'RISE(AC SPADA)': ['rise', 0, 0, 480, 701, 951, 0, 0, 496, 732, 1038, 0],
   'Rise Circuit': ['rcircuit', 0, 0, 477, 826, 1180, 0, 0, 489, 845, 1210, 0],
@@ -8669,7 +8669,7 @@ export const songdata: SongData = {
     1598,
     0,
   ],
-  'Session 9-Chronicles-': [
+  'Session 9 -Chronicles-': [
     'session9',
     0,
     0,
@@ -10650,7 +10650,7 @@ export const songdata: SongData = {
     1571,
     0,
   ],
-  'Timepiece phase II(CN Ver.)': [
+  'Timepiece phase II (CN Ver.)': [
     'tpiececn',
     0,
     0,
@@ -11001,7 +11001,7 @@ export const songdata: SongData = {
     0,
   ],
   'U.S.A.': ['usa', 0, 287, 568, 969, 1467, 0, 0, 565, 920, 1483, 0],
-  Übertreffen: [
+  Ubertreffen: [
     'ubertref',
     0,
     270,
@@ -11425,7 +11425,7 @@ export const songdata: SongData = {
     0,
   ],
   'WE LOVE SHONAN': ['weshonan', 0, 0, 404, 865, 1106, 0, 0, 421, 734, 1180, 0],
-  "We're so Happy(P*Light Remix) IIDX ver.": [
+  "We're so Happy (P*Light Remix) IIDX ver.": [
     'wesoh_pl',
     0,
     0,
@@ -11618,7 +11618,7 @@ export const songdata: SongData = {
   Xepher: ['xepher', 0, 205, 571, 1135, 1520, 0, 0, 559, 1089, 1498, 0],
   Xerulean: ['xerulean', 0, 0, 690, 1049, 1802, 0, 0, 709, 1043, 1804, 0],
   XINOBIKILL: ['xinobikl', 0, 0, 506, 910, 1475, 0, 0, 558, 1074, 1566, 0],
-  Xlø: ['xlo', 0, 0, 776, 1304, 1988, 0, 0, 708, 1304, 1936, 0],
+  Xlo: ['xlo', 0, 0, 776, 1304, 1988, 0, 0, 708, 1304, 1936, 0],
   Xperanza: ['xperanza', 0, 276, 701, 1238, 1637, 0, 0, 690, 1141, 1698, 0],
   Xyndrome: ['xyndrome', 0, 0, 488, 840, 1495, 0, 0, 529, 901, 1480, 0],
   'Y&Co. is dead or alive': [
@@ -12748,7 +12748,7 @@ export const songdata: SongData = {
     1333,
     0,
   ],
-  'がっつり陰キャ!?怪盗いいんちょの億劫^^;': [
+  'がっつり陰キャ!? 怪盗いいんちょの億劫^^;': [
     '_gatturi',
     0,
     0,
@@ -12856,7 +12856,7 @@ export const songdata: SongData = {
     1366,
     0,
   ],
-  '華爛漫-Flowers-': [
+  '華爛漫 -Flowers-': [
     '_hranman',
     0,
     169,
@@ -12912,7 +12912,7 @@ export const songdata: SongData = {
     1303,
     0,
   ],
-  焱影: ['_hikage', 0, 0, 366, 723, 1437, 0, 0, 440, 780, 1431, 0],
+  火影: ['_hikage', 0, 0, 366, 723, 1437, 0, 0, 440, 780, 1431, 0],
   ヒマワリ: ['_hima_gd', 0, 144, 285, 947, 1042, 0, 0, 396, 856, 943, 0],
   'ヒマワリ(CS HAPPY SKY)': [
     '_hima_cs',
@@ -12986,7 +12986,7 @@ export const songdata: SongData = {
     1124,
     0,
   ],
-  '表裏一体!?怪盗いいんちょの悩み♥': [
+  '表裏一体！？怪盗いいんちょの悩み': [
     '_hyouri',
     0,
     0,
@@ -13174,7 +13174,7 @@ export const songdata: SongData = {
     1586,
     0,
   ],
-  'Χ-DEN': ['_kai_den', 0, 0, 861, 1418, 2220, 0, 0, 896, 1495, 2220, 0],
+  'X-DEN': ['_kai_den', 0, 0, 861, 1418, 2220, 0, 0, 896, 1495, 2220, 0],
   怪物: ['_kaibutu', 0, 174, 376, 602, 1205, 0, 0, 383, 610, 1241, 0],
   革命: ['_kakumei', 235, 230, 392, 1004, 1183, 0, 0, 702, 1209, 1401, 0],
   叶うまでは: ['_kanau', 0, 123, 387, 727, 988, 0, 0, 387, 727, 0, 0],
@@ -13240,7 +13240,7 @@ export const songdata: SongData = {
     955,
     1494,
   ],
-  '恋する☆宇宙戦争っ!!': [
+  '恋する☆宇宙戦争っ！！': [
     '_koisuru',
     0,
     257,
@@ -13300,7 +13300,7 @@ export const songdata: SongData = {
     0,
   ],
   狂イ咲ケ焔ノ華: ['_kuruizk', 0, 0, 621, 1269, 1860, 0, 0, 656, 1316, 1894, 0],
-  'キャトられ♥恋はモ～モク': [
+  'キャトられ恋はモ～モク': [
     '_kyatora',
     0,
     0,
@@ -13346,7 +13346,7 @@ export const songdata: SongData = {
     1105,
     0,
   ],
-  'ピアノ独奏無言歌 "灰燼"': [
+  'ピアノ独奏無言歌 \"灰燼\"': [
     '_pkaijin',
     0,
     0,
@@ -13552,7 +13552,7 @@ export const songdata: SongData = {
     1256,
     0,
   ],
-  'ミラージュ･レジデンス': [
+  'ミラージュ・レジデンス': [
     '_m_resid',
     0,
     274,
@@ -13849,7 +13849,7 @@ export const songdata: SongData = {
     0,
   ],
   '惑-perplexity-': ['_perplex', 0, 190, 350, 487, 699, 0, 0, 347, 493, 779, 0],
-  'ピアノ協奏曲第１番"蠍火"': [
+  'ピアノ協奏曲第１番”蠍火”': [
     '_psasori',
     0,
     270,
@@ -13863,7 +13863,7 @@ export const songdata: SongData = {
     1730,
     0,
   ],
-  'ピアノ協奏曲第１番"蠍火" (BlackY Remix)': [
+  'ピアノ協奏曲第1番”蠍火” (BlackY Remix)': [
     '_psaso_r',
     0,
     0,
@@ -13877,7 +13877,7 @@ export const songdata: SongData = {
     1937,
     0,
   ],
-  '恋愛=精度×認識力': [
+  '恋愛＝精度×認識力': [
     '_r_s_x_n',
     0,
     0,
@@ -14155,7 +14155,7 @@ export const songdata: SongData = {
   聖人の塔: ['_seijin', 0, 0, 489, 1076, 1567, 0, 0, 530, 1139, 1997, 0],
   '晴天Bon Voyage': ['_seiten', 0, 0, 242, 649, 917, 0, 0, 370, 672, 915, 0],
   千年ノ理: ['_sennen', 0, 0, 602, 1008, 1608, 2183, 0, 680, 931, 1774, 2190],
-  '旋律のドグマ～Misérables～': [
+  '旋律のドグマ～Miserables～': [
     '_s_dogma',
     0,
     0,
@@ -14627,7 +14627,7 @@ export const songdata: SongData = {
     1774,
     0,
   ],
-  'Ōu Legends': ['_oulgnds', 0, 0, 581, 1068, 1687, 0, 0, 600, 1063, 1701, 0],
+  'Ou Legends': ['_oulgnds', 0, 0, 581, 1068, 1687, 0, 0, 600, 1063, 1701, 0],
   東京神話: ['_tksinwa', 0, 235, 528, 914, 1505, 0, 0, 500, 906, 1533, 0],
   トリカゴノ鳳凰: ['_trikago', 0, 0, 586, 1057, 1932, 0, 0, 579, 1138, 1709, 0],
   '取り残された美術(Arranged:HiZuMi)': [
@@ -14739,7 +14739,7 @@ export const songdata: SongData = {
     1835,
     0,
   ],
-  'ワルツ第17番 ト短調"大犬のワルツ"': [
+  'ワルツ第17番 ト短調”大犬のワルツ”': [
     '_valse17',
     0,
     0,
