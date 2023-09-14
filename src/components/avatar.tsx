@@ -22,7 +22,7 @@ const Avatar = () => {
           {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
           {profile ? (
             <picture>
-              <img src={qpro} alt="" width="20" height="20" />
+              <img src={`${qpro}.png`} alt="" width="20" height="20" />
             </picture>
           ) : (
             <div className="bg-white w-20 h-20" />
