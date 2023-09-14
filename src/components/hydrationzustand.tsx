@@ -7,7 +7,6 @@ type LayoutProps = {
 const HydrationZustand: React.FC<LayoutProps> = ({ children }) => {
   const [isHydrated, setIsHydrated] = useState(false);
 
-  // Wait till Next.js rehydration completes
   useEffect(() => {
     setIsHydrated(true);
   }, []);
