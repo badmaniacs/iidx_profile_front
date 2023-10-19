@@ -63,7 +63,7 @@ const Songcell: React.FC<songTier> = (song: songTier) => {
             {song.difficulty === 'ANOTHER'
               ? song.title
               : song.difficulty === 'LEGGENDARIA'
-              ? song.title + '[L]'
+              ? '†' + song.title
               : song.title + '[H]'}
           </span>
           <div className="mt-auto ">

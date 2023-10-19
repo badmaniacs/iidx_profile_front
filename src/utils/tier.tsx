@@ -3031,6 +3031,20 @@ export const tierData = [
     version: '19',
   },
   {
+    title: '恋する☆宇宙戦争っ！！',
+    difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '19',
+  },
+  {
+    title: 'yellow head joe',
+    difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '19',
+  },
+  {
     title: '金野火織の金色提言',
     difficulty: 'ANOTHER',
     normal: 'ep A',
