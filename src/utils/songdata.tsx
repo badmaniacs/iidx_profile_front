@@ -379,7 +379,7 @@ export const songdata: SongData = {
     1227,
     0,
   ],
-  'Anisakis -somatic mutation type\"Forza\"-': [
+  'Anisakis -somatic mutation type"Forza"-': [
     'anisakis',
     314,
     256,
@@ -2135,7 +2135,7 @@ export const songdata: SongData = {
     743,
     1165,
     1623,
-    0,
+    2135,
     0,
     739,
     1183,
@@ -11687,7 +11687,7 @@ export const songdata: SongData = {
     401,
     778,
     1152,
-    0,
+    1596,
     0,
     424,
     893,
@@ -12043,7 +12043,7 @@ export const songdata: SongData = {
     1935,
     0,
   ],
-  ÆTHER: ['_aether', 0, 0, 514, 833, 1440, 1640, 0, 542, 839, 1385, 1621],
+  ATHER: ['_aether', 0, 0, 514, 833, 1440, 1640, 0, 542, 839, 1385, 1621],
   牧神笛吹きて: ['_aigipan', 0, 0, 377, 721, 1044, 0, 0, 379, 748, 1026, 0],
   昏き甲鉄のヴェルガ: [
     '_k_verga',
@@ -13247,7 +13247,7 @@ export const songdata: SongData = {
     455,
     883,
     1835,
-    0,
+    2355,
     0,
     455,
     840,
@@ -13346,7 +13346,7 @@ export const songdata: SongData = {
     1105,
     0,
   ],
-  'ピアノ独奏無言歌 \"灰燼\"': [
+  'ピアノ独奏無言歌 "灰燼"': [
     '_pkaijin',
     0,
     0,
@@ -14803,4 +14803,8 @@ export const songdata: SongData = {
     1787,
     0,
   ],
+  '#CMFLG': ['_cmflg', 0, 0, 601, 1186, 1748, 0, 0, 625, 1152, 1562, 0],
+  'Always We Trust In You' : ['alwayswe', 0,   0, 607, 951,1625,   0,   0, 630, 925,1692,   0],
+  'VØID' : ['vo_id',  0,   0, 684,1028,1712,   0,   0, 685, 991,1709,   0],
+  
 };

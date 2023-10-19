@@ -1,9 +1,12 @@
-const Profile = () => {
-return(
-    <div>
-        준비중입니다.
-    </div>
-)
-}
+import Profiletable from '@/components/profiletable';
 
-export default Profile
+const Profile = () => {
+  return (
+    <div className="flex flex-col gap-16">
+      <p>개발중입니다...</p>
+      <Profiletable />
+    </div>
+  );
+};
+
+export default Profile;

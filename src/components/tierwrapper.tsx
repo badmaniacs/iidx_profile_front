@@ -1,8 +1,7 @@
 import { tierData } from '@/utils/tier';
-import Songcell from './songcell';
 import useProfileStore from '@/store/ProfileDataStore';
-import { useState } from 'react';
-import Tierwrapperlamp from './tierwrapperlamp';
+import Unsortedtable from './unsortedtable';
+import Sortedtable from './sortedtable';
 
 interface TierWrapperProps {
   tier: string;
@@ -12,42 +11,11 @@ const TierWrapper: React.FC<TierWrapperProps> = ({ tier }) => {
   const { profile } = useProfileStore();
   const playdata = profile?.musicData.SP.filter((item) => item.level === 12);
 
-  const [EPclearCheck, setEpClearCheck] = useState<number[]>([]);
-  const [IDclearCheck, setIdClearCheck] = useState<number[]>([]);
-
-  const addEPclearCheck = (item: number) => {
-    setEpClearCheck((prev) => [...prev, item]);
-  };
-
-  const addIDclearCheck = (item: number) => {
-    setIdClearCheck((prev) => [...prev, item]);
-  };
-
   if (tier === '미분류') {
     const filterdSongList = tierData.filter((item) => item.hard === '');
     return (
       <>
-        <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l mb-4">
-          <div className="text-sm h-full w-full border-b flex justify-center items-center">
-            <p>미분류</p>
-          </div>
-          <div className="col-span-6 border-l">
-            <div className="grid grid-cols-6 ">
-              {filterdSongList.map((song) => (
-                <Songcell
-                  key={song.title + song.difficulty}
-                  title={song.title}
-                  difficulty={song.difficulty}
-                  playdata={playdata?.find(
-                    (item) =>
-                      item.music_name === song.title &&
-                      item.difficulty === song.difficulty,
-                  )}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <Unsortedtable songs={filterdSongList} playdata={playdata!} />
       </>
     );
   }
@@ -59,63 +27,12 @@ const TierWrapper: React.FC<TierWrapperProps> = ({ tier }) => {
   );
 
   return (
-    <>
-      <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l mb-4">
-        <div className="text-sm h-full w-full border-b flex flex-row">
-          <div className="basis-11/12 flex ml-5 justify-center items-center">
-            <p>지력{tier}</p>
-          </div>
-          <Tierwrapperlamp clearCheck={EPclearCheck} />
-        </div>
-        <div className="col-span-6 border-l">
-          <div className="grid grid-cols-6">
-            {filterdBytierSonglistEP.map((song) => (
-              <Songcell
-                key={song.title + song.difficulty}
-                title={song.title}
-                difficulty={song.difficulty}
-                playdata={playdata?.find(
-                  (item) =>
-                    item.music_name === song.title &&
-                    item.difficulty === song.difficulty,
-                )}
-                clearCheck={addEPclearCheck}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      {tier === 'F' ? (
-        <div></div>
-      ) : (
-        <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l">
-          <div className="text-sm h-full w-full border-b flex flex-row">
-            <div className="basis-11/12  ml-5 flex justify-center items-center">
-              <p>개인차{tier}</p>
-            </div>
-            <Tierwrapperlamp clearCheck={IDclearCheck} />
-          </div>
-          <div className="col-span-6 border-l">
-            <div className="grid grid-cols-6 ">
-              {filterdBytierSonglistID.map((song) => (
-                <Songcell
-                  key={song.title + song.difficulty}
-                  title={song.title}
-                  difficulty={song.difficulty}
-                  playdata={playdata?.find(
-                    (item) =>
-                      item.music_name === song.title &&
-                      item.difficulty === song.difficulty,
-                  )}
-                  clearCheck={addIDclearCheck}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-      <br />
-    </>
+    <Sortedtable
+      idSongs={filterdBytierSonglistID}
+      epSongs={filterdBytierSonglistEP}
+      playdata={playdata!}
+      tier={tier}
+    />
   );
 };
 

@@ -31,6 +31,10 @@ const Tier = () => {
   const musicDataSp = profile?.musicData.SP;
   const captureRef = useRef<HTMLDivElement>(null);
 
+  const kstDate = new Date(profile?.createAt).toLocaleDateString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+});
+
   const handleCapture = async () => {
     await captureComponent(captureRef);
   };
@@ -63,7 +67,13 @@ const Tier = () => {
           <h2 className="text-center text-2xl">
             IIDX SP LEVEL 12 HARD GAUGE RANK TABLE
           </h2>
-          <RiScreenshot2Fill onClick={handleCapture} className="h-10 w-10 ml-auto hover:cursor-pointer" />
+          <div className="flex flex-row justify-between">
+            <p className='mt-4 text-lgray'>created at {kstDate}</p>
+            <RiScreenshot2Fill
+              onClick={handleCapture}
+              className="h-10 w-10 ml-auto hover:cursor-pointer"
+            />
+          </div>
           <div className="flex flex-row justify-between">
             {musicDataSp && <Cleartypecounter musicData={musicDataSp} />}
             <p className="text-right">
