@@ -1,5 +1,18 @@
 interface SongData {
-  [title: string]: (string | number)[];
+  [title: string]: [
+    string,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+  ];
 }
 
 export const songdata: SongData = {
@@ -1860,7 +1873,7 @@ export const songdata: SongData = {
   ],
   'CLOUDY MUSIC': ['cloudy', 0, 229, 422, 620, 0, 0, 0, 422, 619, 0, 0],
   'CODE -CRiMSON-': ['ccrimson', 0, 0, 668, 971, 1516, 0, 0, 699, 933, 1563, 0],
-  'CODE:Ø': ['code_0', 0, 0, 726, 1120, 1454, 0, 0, 738, 1086, 1382, 0],
+  'CODE:0': ['code_0', 0, 0, 726, 1120, 1454, 1829, 0, 738, 1086, 1382, 0],
   'CODE:1 [revision1.0.1]': [
     'code_1',
     0,
@@ -14804,7 +14817,22 @@ export const songdata: SongData = {
     0,
   ],
   '#CMFLG': ['_cmflg', 0, 0, 601, 1186, 1748, 0, 0, 625, 1152, 1562, 0],
-  'Always We Trust In You' : ['alwayswe', 0,   0, 607, 951,1625,   0,   0, 630, 925,1692,   0],
-  'VØID' : ['vo_id',  0,   0, 684,1028,1712,   0,   0, 685, 991,1709,   0],
-  
+  'Always We Trust In You': [
+    'alwayswe',
+    0,
+    0,
+    607,
+    951,
+    1625,
+    0,
+    0,
+    630,
+    925,
+    1692,
+    0,
+  ],
+  VØID: ['vo_id', 0, 0, 684, 1028, 1712, 0, 0, 685, 991, 1709, 0],
+  Sirius: ['sirius', 0, 0, 0, 0, 1637, 0, 0, 0, 0, 0, 0],
+  電光: ['_denkou', 0, 0, 0, 0, 1560, 0, 0, 0, 0, 0, 0],
+  '《PL|RAYER》': ['_plrayer', 0, 0, 0, 0, 1420, 0, 0, 0, 0, 0, 0],
 };

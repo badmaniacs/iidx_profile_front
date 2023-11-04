@@ -34,8 +34,21 @@ const Profiletable = () => {
                 </picture>
               </div>
             </div>
+            <div className="grid grid-cols-2 bg-black justify-between m-5 mt-0">
+              <p className='p-2'>
+                SP레이더
+              </p>
+              <p className='p-2'>
+                DP레이더
+              </p>
+            </div>
           </div>
-          <div className="self-center bg-black w-[92%] h-[30%]"></div>
+          <div className="self-center bg-black w-[92%] h-[30%]">
+            <p>
+              명트리플어쩌구 마레트리플어쩌구 
+              
+            </p>
+          </div>
         </div>
       </div>
     </div>
