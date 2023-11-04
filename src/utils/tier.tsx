@@ -1,4 +1,15 @@
-export const tierData = [
+type category = 'id' | 'ep';
+type tier = 'S+' | 'S' | 'A+' | 'A' | 'B+' | 'B' | 'C' | 'D' | 'E' | 'F';
+
+interface tierData {
+  title: string;
+  difficulty: 'HYPER' | 'ANOTHER' | 'LEGGENDARIA';
+  normal: string;
+  hard: `${category} ${tier}` | '';
+  version: string;
+}
+
+export const tierData: tierData[] = [
   {
     title: 'A',
     difficulty: 'ANOTHER',
@@ -2635,7 +2646,7 @@ export const tierData = [
     title: 'Xerulean',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: 'S',
+    hard: 'ep S',
     version: '30',
   },
   {
@@ -3482,14 +3493,14 @@ export const tierData = [
     title: 'ぞうしょく！？マイデンティティ',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: 'B+',
+    hard: 'ep B+',
     version: '30',
   },
   {
     title: '#CMFLG',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep C',
     version: '30',
   },
   {
@@ -3517,7 +3528,7 @@ export const tierData = [
     title: 'MAX 360',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B',
     version: '30',
   },
   {
@@ -3533,5 +3544,33 @@ export const tierData = [
     normal: '',
     hard: 'id B+',
     version: '30',
+  },
+  {
+    title: 'CODE:0',
+    difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '26',
+  },
+  {
+    title: '電光',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Sirius',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: '《PL|RAYER》',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
   },
 ];
