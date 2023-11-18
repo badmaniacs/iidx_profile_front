@@ -497,7 +497,7 @@ export const tierData: tierData[] = [
     title: 'Dances with Snow Fairies',
     difficulty: 'LEGGENDARIA',
     normal: '',
-    hard: '',
+    hard: 'ep S',
     version: '18',
   },
   {
@@ -3507,14 +3507,14 @@ export const tierData: tierData[] = [
     title: 'Always We Trust In You',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B',
     version: '30',
   },
   {
     title: 'VØID',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'id S',
     version: '30',
   },
   {
@@ -3535,7 +3535,7 @@ export const tierData: tierData[] = [
     title: 'suspicions',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep A',
     version: '30',
   },
   {
@@ -3573,4 +3573,53 @@ export const tierData: tierData[] = [
     hard: '',
     version: '31',
   },
+  {
+    title: 'Dahlia',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'frequent',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'GAME ON',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Ghost Pulse',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'JUSTICE/GUILTY feat. Nana Takahashi & 709sec.',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'SOLAR ECLIPSE',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: '摩天楼',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  }
 ];
