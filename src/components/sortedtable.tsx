@@ -52,7 +52,7 @@ const Sortedtable: React.FC<SortedtableProps> = ({
           <Tierwrapperlamp clearCheck={EPclearCheck} />
         </div>
         <div className="col-span-6 border-l">
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-3 md:grid-cols-6">
             {epSongs.map((song) => (
               <Songcell
                 key={song.title + song.difficulty}
@@ -80,7 +80,7 @@ const Sortedtable: React.FC<SortedtableProps> = ({
             <Tierwrapperlamp clearCheck={IDclearCheck} />
           </div>
           <div className="col-span-6 border-l">
-            <div className="grid grid-cols-6 ">
+            <div className="grid grid-cols-3 md:grid-cols-6">
               {idSongs.map((song) => (
                 <Songcell
                   key={song.title + song.difficulty}
