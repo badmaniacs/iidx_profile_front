@@ -3,12 +3,12 @@ import Link from 'next/link';
 const Unauthbutton = () => {
   return (
     <>
-      <li className="hidden md:block">
+      <li className="mr-3 md:block">
         <Link className="" href="/signin">
           로그인
         </Link>
       </li>
-      <li className="hidden md:block">
+      <li className="md:block">
         <Link
           className=""
           href="/signup"
