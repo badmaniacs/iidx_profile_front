@@ -57,7 +57,7 @@ const Update = () => {
         <div className="flex flex-col gap-4">
           <span>
             토큰을 발급 받은 후에{` `}
-            <Link href="https://p.eagate.573.jp/" className="text-primary">
+            <Link href="https://p.eagate.573.jp/" className="text-primary" target='_blank'>
               e-amusement
             </Link>
             에 접속합니다.

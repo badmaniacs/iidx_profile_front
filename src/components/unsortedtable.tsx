@@ -20,7 +20,7 @@ const Unsortedtable: React.FC<UnsortedtableProps> = ({ songs, playdata }) => {
         <p>미분류</p>
       </div>
       <div className="col-span-6 border-l">
-        <div className="grid grid-cols-6 ">
+        <div className="grid grid-cols-3 md:grid-cols-6">
           {songs.map((song) => (
             <Songcell
               key={song.title + song.difficulty}
