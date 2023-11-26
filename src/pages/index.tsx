@@ -5,6 +5,7 @@ import Head from 'next/head';
 
 export default function Home() {
   const { isLoggedIn } = useAuthStore();
+  const isMobile = window.innerWidth <= 600
 
   return (
     <>
@@ -44,8 +45,8 @@ export default function Home() {
                 url: 'https://twitter.com/iidx_pastainfo',
               }}
               options={{
-                height: '400',
-                width: '600',
+                height: isMobile ? '200px' : '400px',
+                width: isMobile ? '300px' : '600px',
                 theme: 'dark',
               }}
             />

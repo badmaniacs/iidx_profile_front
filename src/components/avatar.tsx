@@ -3,6 +3,7 @@ import useProfileStore from '@/store/ProfileDataStore';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useAuthStore from '@/store/AuthStore';
+import { useEffect, useState } from 'react';
 
 const Avatar = () => {
   const { profile, clear } = useProfileStore();
@@ -14,13 +15,31 @@ const Avatar = () => {
     logout();
     clear();
   };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
-          {profile ? (
+          {isMobile ? (
+            // 햄버거 아이콘을 여기에 추가합니다. Tailwind CSS의 클래스를 활용하세요.
+            <div className="hamburger-menu text-2xl">☰</div>
+          ) : profile ? (
             <picture>
               <img src={`${qpro}.png`} alt="" width="20" height="20" />
             </picture>
