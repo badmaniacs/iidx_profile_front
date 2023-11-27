@@ -37,7 +37,6 @@ const Avatar = () => {
         <div className="w-10 rounded-full">
           {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
           {isMobile ? (
-            // 햄버거 아이콘을 여기에 추가합니다. Tailwind CSS의 클래스를 활용하세요.
             <div className="hamburger-menu text-2xl">☰</div>
           ) : profile ? (
             <picture>
