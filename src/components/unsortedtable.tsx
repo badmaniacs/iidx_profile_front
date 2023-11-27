@@ -16,7 +16,7 @@ interface UnsortedtableProps {
 const Unsortedtable: React.FC<UnsortedtableProps> = ({ songs, playdata }) => {
   return (
     <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l mb-4">
-      <div className="text-[11px] basis-11/12 ml-1 md:text-sm basis-11/12 ml-5 flex justify-center items-center">
+      <div className="text-[10px] basis-11/12 ml-0 md:text-sm h-full w-full border-b flex justify-center items-center">
         <p>미분류</p>
       </div>
       <div className="col-span-6 border-l">

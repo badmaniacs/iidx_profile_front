@@ -46,7 +46,7 @@ const Sortedtable: React.FC<SortedtableProps> = ({
     <>
       <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l mb-4">
         <div className="text-sm h-full w-full border-b flex flex-row">
-          <div className="text-[11px] basis-11/12 ml-1 md:text-sm basis-11/12 ml-5 flex justify-center items-center">
+          <div className="text-[10px] basis-11/12 ml-0 md:text-sm basis-11/12 ml-4 flex justify-center items-center">
             <p>지력{tier}</p>
           </div>
           <Tierwrapperlamp clearCheck={EPclearCheck} />
@@ -74,7 +74,7 @@ const Sortedtable: React.FC<SortedtableProps> = ({
       ) : (
         <div className="grid grid-cols-7 text-sm items-center border-gray-300 border-t border-l">
           <div className="text-sm h-full w-full border-b flex flex-row">
-            <div className="text-[11px] basis-11/12 ml-1 md:text-sm basis-11/12 ml-5 flex justify-center items-center">
+            <div className="text-[10px] basis-11/12 ml-0 md:text-sm basis-11/12 ml-4 flex justify-center items-center">
               <p>개인차{tier}</p>
             </div>
             <Tierwrapperlamp clearCheck={IDclearCheck} />
