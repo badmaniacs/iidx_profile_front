@@ -1393,7 +1393,7 @@ export const tierData: tierData[] = [
     title: 'Marie Antoinette',
     difficulty: 'LEGGENDARIA',
     normal: 'id B',
-    hard: 'id B',
+    hard: 'id B+',
     version: '16',
   },
   {
@@ -1680,7 +1680,7 @@ export const tierData: tierData[] = [
     title: "PLEASE DON'T GO",
     difficulty: 'ANOTHER',
     normal: 'id D',
-    hard: 'id D',
+    hard: 'id C',
     version: '8',
   },
   {
@@ -2716,7 +2716,7 @@ export const tierData: tierData[] = [
     title: '199024club -Re:BounceKiller-',
     difficulty: 'ANOTHER',
     normal: 'id A',
-    hard: 'id A',
+    hard: 'id B+',
     version: '23',
   },
   {
@@ -3052,7 +3052,7 @@ export const tierData: tierData[] = [
     title: 'yellow head joe',
     difficulty: 'LEGGENDARIA',
     normal: '',
-    hard: '',
+    hard: 'ep B',
     version: '19',
   },
   {
@@ -3621,5 +3621,33 @@ export const tierData: tierData[] = [
     normal: '',
     hard: '',
     version: '31',
-  }
+  },
+  {
+    title: '終焔のClaudia',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Out of Control',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Vermilion Carol',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
 ];
