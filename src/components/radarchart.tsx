@@ -44,12 +44,12 @@ const Radarchart: React.FC<RadarchartProps> = ({ radardata }) => {
     datasets: [
       {
         data: [
-          Number(radardata.PEAK),
-          Number(radardata.CHORD),
           Number(radardata.NOTES),
-          Number(radardata.CHARGE),
-          Number(radardata.SOFLAN),
+          Number(radardata.PEAK),
           Number(radardata.SCRATHCH),
+          Number(radardata.SOFLAN),
+          Number(radardata.CHARGE),
+          Number(radardata.CHORD),
         ],
         backgroundColor: 'rgba(255, 255, 0, 0.6)',
         pointRadius: 0,

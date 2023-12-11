@@ -1,13 +1,15 @@
 import useProfileStore from '@/store/ProfileDataStore';
 import Radarchart from './radarchart';
+import Searchbar from './searchbar';
 
 const Profiletable = () => {
   const { profile } = useProfileStore();
 
   return (
     <div className="flex items-center justify-center md:pb-32">
-      <div className="flex flex-col gap-2 flex-grow text-sm max-w-screen-sm">
-        <div className="relative flex flex-col border-2 border-black bg-profileback text-white h-[750px]">
+      <div className="flex flex-col gap-0 flex-grow text-sm max-w-screen-sm">
+        <Searchbar />
+        <div className="relative flex flex-col border-2 border-black bg-profileback text-white h-[750px] mt-4">
           <div className="flex flex-col">
             <div className="self-center text-lg pt-2">INFORMATION</div>
             <br />
