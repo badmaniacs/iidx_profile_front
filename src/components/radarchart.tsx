@@ -94,7 +94,7 @@ const Radarchart: React.FC<RadarchartProps> = ({ radardata }) => {
       },
     },
   };
-
+// @ts-ignore
   return <Radar data={data} options={options} />;
 };
 
