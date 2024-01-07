@@ -13006,7 +13006,7 @@ export const songdata: SongData = {
     580,
     1127,
     1815,
-    0,
+    2334,
     0,
     716,
     1322,
