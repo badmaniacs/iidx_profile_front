@@ -3584,7 +3584,7 @@ export const tierData: tierData[] = [
     title: 'frequent',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep D',
     version: '31',
   },
   {
@@ -3598,14 +3598,14 @@ export const tierData: tierData[] = [
     title: 'Ghost Pulse',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep C',
     version: '31',
   },
   {
     title: 'JUSTICE/GUILTY feat. Nana Takahashi & 709sec.',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep C',
     version: '31',
   },
   {
@@ -3619,7 +3619,7 @@ export const tierData: tierData[] = [
     title: '摩天楼',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B',
     version: '31',
   },
   {
@@ -3653,6 +3653,20 @@ export const tierData: tierData[] = [
   {
     title: '表裏一体！？怪盗いいんちょの悩み',
     difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'MAXIMUM CHEAT GIRL',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Glitch N Ride',
+    difficulty: 'ANOTHER',
     normal: '',
     hard: '',
     version: '31',
