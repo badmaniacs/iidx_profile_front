@@ -11,8 +11,8 @@ export default function Home() {
     <>
       <Head>
         <meta
-          name="keywords"
-          content="투덱, 서열표, 서열, 투덱 서열, 투덱 서열표, 12레벨, 투덱 12레벨 서열표, 비트매니아, 비트매니아 서열표, IIDX 서열표, 투덱 난이도표, 난이도표"
+          name="description"
+          content="beatmania IIDX 서열표, 난이도표, 프로필 제공 서비스 PASTAINFO"
         />
       </Head>
       <div className="flex flex-col gap-10">
