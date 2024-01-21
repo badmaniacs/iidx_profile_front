@@ -3671,11 +3671,4 @@ export const tierData: tierData[] = [
     hard: '',
     version: '31',
   },
-  {
-    title: '表裏一体！？怪盗いいんちょの悩み',
-    difficulty: 'LEGGENDARIA',
-    normal: '',
-    hard: '',
-    version: '31',
-  },
 ];
