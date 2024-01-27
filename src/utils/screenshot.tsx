@@ -1,4 +1,4 @@
-import html2canvas from 'html2canvas';
+import { domToPng } from 'modern-screenshot';
 
 export const captureComponent = async (
   captureRef: React.RefObject<HTMLDivElement>,
@@ -6,12 +6,8 @@ export const captureComponent = async (
   if (!captureRef.current) return;
 
   const div = captureRef.current;
-  const canvas = await html2canvas(div, {
-    scale: 1,
-    backgroundColor: '#18181B',
-  });
 
-  const imageDataURL = canvas.toDataURL('image/png');
+  const imageDataURL = await domToPng(div, {quality:1, scale:1.2});
 
   const a = document.createElement('a');
   a.href = imageDataURL;

@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <HydrationZustand>
         <Head>
-          <title>IIDX PASTAIFNO - 투덱 서열표, 난이도표, 프로필</title>
+          <title>IIDX PASTAINFO - 투덱 서열표, 난이도표, 프로필</title>
         </Head>
         <Analytics/>
         <Layout>

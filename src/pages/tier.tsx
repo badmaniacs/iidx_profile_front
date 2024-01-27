@@ -8,6 +8,7 @@ import Cleartypecounter from '@/components/cleartypecounter';
 import { RiScreenshot2Fill } from 'react-icons/ri';
 import { captureComponent } from '@/utils/screenshot';
 
+
 const tierList = [
   'S+',
   'S',
@@ -68,7 +69,7 @@ const Tier = () => {
             IIDX SP LEVEL 12 HARD GAUGE RANK TABLE
           </h2>
           <div className="flex flex-row justify-between">
-            <p className='mt-4 text-lgray'>created at {kstDate}</p>
+            {profile && <p className='mt-4 text-lgray'>created at {kstDate}</p>}
             <RiScreenshot2Fill
               onClick={handleCapture}
               className="h-10 w-10 ml-auto hover:cursor-pointer"
