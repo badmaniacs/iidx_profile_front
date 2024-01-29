@@ -24,7 +24,8 @@ module.exports = {
       lgray: 'rgb(209 213 219)',
       red: 'rgb(239 68 68)',
       primary: 'rgb(24 24 27)',
-      profileback: 'rgb(35 35 35)'
+      profileback: 'rgb(35 35 35)',
+      resultwrap: 'rgb(70 70 70)'
     },
   },
   plugins: [require('daisyui')],

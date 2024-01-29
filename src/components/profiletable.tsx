@@ -1,15 +1,18 @@
 import useProfileStore from '@/store/ProfileDataStore';
 import Radarchart from './radarchart';
 import Searchbar from './searchbar';
+import useSearchresultStore from '@/store/SearchresultStore';
+import Profilescore from './profilescore';
 
 const Profiletable = () => {
   const { profile } = useProfileStore();
+  const { Searchresult } = useSearchresultStore();
 
   return (
-    <div className="flex items-center justify-center md:pb-32">
+    <div className="flex items-center justify-center md:pb-10 pt-10">
       <div className="flex flex-col gap-0 flex-grow text-sm max-w-screen-sm">
         <Searchbar />
-        <div className="relative flex flex-col border-2 border-black bg-profileback text-white h-[750px] mt-4">
+        <div className="relative flex flex-col border-2 border-black bg-profileback text-white h-[720px] mt-4">
           <div className="flex flex-col">
             <div className="self-center text-lg pt-2">INFORMATION</div>
             <br />
@@ -61,8 +64,10 @@ const Profiletable = () => {
               </div>
             </div>
           </div>
-          <div className="self-center bg-black w-[92%] h-[27%]">
-            <p>명트리플어쩌구 마레트리플어쩌구</p>
+          <div className="grid grid-cols-5 grid-rows-3  self-center bg-black w-[92%] h-[23%] ">
+            {Searchresult?.map((item) => (
+              <Profilescore key={item.title} SearchresultProps={item} />
+            ))}
           </div>
         </div>
       </div>

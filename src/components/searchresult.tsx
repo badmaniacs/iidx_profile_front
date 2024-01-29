@@ -1,6 +1,6 @@
 import { Music } from '@/gql/graphql';
 import useProfileStore from '@/store/ProfileDataStore';
-import { useEffect, useState } from 'react';
+import { RefObject, useEffect, useState } from 'react';
 import Searchresultcell from './searchresultcell';
 
 interface SearchresultProps {
@@ -10,9 +10,10 @@ interface SearchresultProps {
     level: number;
     title: string;
   };
+  inputClearHandler: () => void
 }
 
-const Searchresult: React.FC<SearchresultProps> = ({ formValue }) => {
+const Searchresult: React.FC<SearchresultProps> = ({ formValue, inputClearHandler }) => {
   const musicData = useProfileStore().profile?.musicData;
   const [filteredMusicData, setFilteredMusicData] = useState<Music[]>([]);
 
@@ -89,6 +90,8 @@ const Searchresult: React.FC<SearchresultProps> = ({ formValue }) => {
           level={item.level}
           rank={item.rank}
           playtype={formValue.playtype}
+          inputClearHandler={inputClearHandler}
+          setFilteredMusicData={setFilteredMusicData}
         />
       ))}
     </div>
