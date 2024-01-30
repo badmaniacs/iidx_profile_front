@@ -14,12 +14,12 @@ import FAIL from '../asset/clflg1.gif';
 
 import AAA from '../asset/AAA.gif';
 import AA from '../asset/AA.gif';
-import A from '../asset/AAA.gif';
+import A from '../asset/A.gif';
 import B from '../asset/B.gif';
 import C from '../asset/C.gif';
-import D from '../asset/AAA.gif';
-import E from '../asset/AAA.gif';
-import F from '../asset/AAA.gif';
+import D from '../asset/D.gif';
+import E from '../asset/E.gif';
+import F from '../asset/F.gif';
 
 interface SearchresultcellProps {
   title: string;
