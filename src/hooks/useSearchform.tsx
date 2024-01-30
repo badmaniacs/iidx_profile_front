@@ -16,7 +16,6 @@ const useSearchForm = () => {
       ...prevValues,
       [name]: value,
     }));
-    console.log(formValues)
   };
 
   return { formValues, handleInputChange };

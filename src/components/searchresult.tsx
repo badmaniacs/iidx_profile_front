@@ -61,7 +61,7 @@ const Searchresult: React.FC<SearchresultProps> = ({ formValue, inputClearHandle
     };
 
     filterMusicData();
-    console.log(filteredMusicData);
+
   }, [formValue, musicData]);
 
   const calculateSimilarity = (str1: string, str2: string): number => {
