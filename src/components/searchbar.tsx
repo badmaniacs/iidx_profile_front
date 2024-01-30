@@ -70,7 +70,7 @@ const Searchbar = () => {
             onChange={handleInputChange}
             value={formValues.title}
             ref={formRef}
-            placeholder="곡명을 검색해주세요."
+            placeholder="추가하실 곡명을 검색해주세요."
             className="h-10 w-[50%] border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           ></input>
         </div>

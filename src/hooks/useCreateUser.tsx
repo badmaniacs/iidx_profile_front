@@ -47,9 +47,7 @@ const useCreateUser = () => {
             break;
           }
         }
-      } else {
-        console.log(data.data.createUser);
-      }
+      } 
     },
     onError: (error) => {
       console.error('Error creating user:', error);
