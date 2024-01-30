@@ -7,7 +7,17 @@ export const captureComponent = async (
 
   const div = captureRef.current;
 
-  const imageDataURL = await domToPng(div, {quality:1, scale:1.2});
+  const imageDataURL = await domToPng(div, {
+    quality: 1,
+    scale: 1.2,
+    debug: true,
+    fetch: {
+      requestInit: {
+        mode: "cors",
+      },
+      bypassingCache: true,
+    },
+  });
 
   const a = document.createElement('a');
   a.href = imageDataURL;
