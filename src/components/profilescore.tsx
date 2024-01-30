@@ -84,14 +84,16 @@ const Profilescore: React.FC<ProfilescoreProps> = ({ SearchresultProps }) => {
         {SearchresultProps.difficulty}
       </span>
       <span className="row-span-1 flex flex-row text-center text-xs justify-center">
-        <p className=''>
+        <p className="flex items-center mr-1">
           <Image
             height={12}
             src={ranktypeurl ? ranktypeurl : ''}
             alt={`${SearchresultProps.rank}`}
           />
         </p>
-        <p className="place-self-center ml-1">{SearchresultProps.score.split('(')[0]}</p>
+        <div className=''>
+          <p className="">{SearchresultProps.score.split('(')[0]}</p>
+        </div>
       </span>
       <div
         onClick={DeleteSearchresultHandler}
