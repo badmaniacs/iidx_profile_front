@@ -160,7 +160,10 @@ const Profiletable = () => {
       <div className="flex items-center justify-center md:pb-10 pt-10">
         <div className="flex flex-col gap-0 flex-grow text-sm max-w-screen-sm">
           <Searchbar />
-          <div ref={captureRef} className="relative flex flex-col border-2 border-black bg-profileback text-white h-[710px] mt-4">
+          <div
+            ref={captureRef}
+            className="relative flex flex-col border-2 border-black bg-profileback text-white h-[710px] mt-4"
+          >
             <div className="flex flex-col">
               <div
                 className="self-center text-lg pt-2 mb-3"
@@ -239,7 +242,10 @@ const Profiletable = () => {
                 </div>
                 <div className="col-span-2">
                   <picture>
-                    <img src={profile?.qpro} alt="qpro" />
+                    <img
+                      src={`${profile?.qpro}?timestamp=${new Date().getTime()}`}
+                      alt="qpro"
+                    />
                   </picture>
                 </div>
               </div>
@@ -281,12 +287,12 @@ const Profiletable = () => {
           </div>
         </div>
       </div>
-      <div className="" >
+      {/* <div className="">
         <RiScreenshot2Fill
           onClick={handleCapture}
           className="h-10 w-10 mx-auto hover:cursor-pointer"
         />
-      </div>
+      </div> */}
     </>
   );
 };
