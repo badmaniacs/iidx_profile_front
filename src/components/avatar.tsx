@@ -40,7 +40,7 @@ const Avatar = () => {
             <div className="hamburger-menu text-2xl">☰</div>
           ) : profile ? (
             <picture>
-              <img src={`${qpro}.png`} alt="" width="20" height="20" />
+              <img src={`${profile?.qpro}?timestamp=${new Date().getTime()}`} alt="" width="20" height="20" />
             </picture>
           ) : (
             <div className="bg-white w-20 h-20" />
