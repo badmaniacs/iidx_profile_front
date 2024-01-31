@@ -162,7 +162,7 @@ const Profiletable = () => {
           <Searchbar />
           <div
             ref={captureRef}
-            className="relative flex flex-col border-2 border-black bg-profileback text-white h-[710px] mt-4"
+            className="relative flex flex-col border-2 border-black bg-profileback text-white h-[740px] mt-4"
           >
             <div className="flex flex-col">
               <div
@@ -200,51 +200,79 @@ const Profiletable = () => {
                     </p>
                   </div>
                   <div
-                    className="bg-black ml-5 mb-3 p-2 w-[79%] flex justify-between"
+                    className="bg-black ml-5 mb-3 p-2 w-[79%] flex flex-row"
                     style={{ fontFamily: 'MonoplexKRWideNerd-Bold' }}
                   >
-                    <p>취득 단위</p>
-                    <p className="font-bold flex flex-row">
-                      <p className={classtypesp}>{profile?.class.SP}&nbsp;</p>
-                      <p className={classtypedp}>{profile?.class.DP}</p>
-                    </p>
+                    <p className="basis-6/12">취득 단위</p>
+                    <div className="font-bold flex flex-row basis-6/12">
+                      <p className={`basis-1/2 text-center`}>
+                        <div>
+                          <div className={classtypesp}>{profile?.class.SP}</div>
+                          <div className='text-xs'>SP</div>
+                        </div>
+                      </p>
+                      <p className={`basis-1/2 text-center`}>
+                        <div>
+                          <div className={classtypedp}>{profile?.class.DP}</div>
+                          <div className='text-xs'>DP</div>
+                        </div>
+                      </p>
+                    </div>
                   </div>
-                  <div className="bg-black ml-5 mb-3 p-2 w-[79%] flex justify-between">
-                    <p style={{ fontFamily: 'MonoplexKRWideNerd-Bold' }}>
+                  <div className="bg-black ml-5 mb-3 p-2 w-[79%] flex flex-row">
+                    <p
+                      style={{ fontFamily: 'MonoplexKRWideNerd-Bold' }}
+                      className="basis-6/12"
+                    >
                       아레나 클래스
                     </p>
                     <p
                       style={{ fontFamily: 'MonoplexKRWideNerd-Bold' }}
-                      className="flex flex-row"
+                      className="flex flex-row basis-6/12"
                     >
-                      {/* <p className='font-outline-reddan'>{profile?.arena.SP}&nbsp;</p> */}
-                      {arenatypesp !== '' ? (
-                        <Image
-                          src={arenatypesp}
-                          height={19}
-                          alt={`${profile?.arena.SP}`}
-                        />
-                      ) : (
-                        profile?.arena.SP
-                      )}
-                      &nbsp;
-                      {arenatypedp !== '' ? (
-                        <Image
-                          src={arenatypedp}
-                          height={18}
-                          alt={`${profile?.arena.DP}`}
-                        />
-                      ) : (
-                        profile?.arena.DP
-                      )}
+                      <div className="basis-1/2 text-center flex flex-col">
+                        <div>
+                          {arenatypesp !== '' ? (
+                            <Image
+                              src={arenatypesp}
+                              height={18}
+                              alt={`${profile?.arena.SP}`}
+                              className=""
+                            />
+                          ) : (
+                            profile?.arena.SP
+                          )}
+                        </div>
+                        <p className="text-xs">SP</p>
+                      </div>
+                      <div className="basis-1/2 text-center flex flex-col">
+                        <div>
+                          {arenatypedp !== '' ? (
+                            <Image
+                              src={A3}
+                              height={18}
+                              alt={`${profile?.arena.DP}`}
+                            />
+                          ) : (
+                            <Image
+                              src={A3}
+                              height={18}
+                              alt={`${profile?.arena.DP}`}
+                            />
+                          )}
+                        </div>
+                        <p className="text-xs">DP</p>
+                      </div>
                     </p>
                   </div>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 ">
                   <picture>
                     <img
                       src={`${profile?.qpro}?timestamp=${new Date().getTime()}`}
                       alt="qpro"
+                      className='w-full h-auto'
+                      style={{ marginLeft: '-20px' }}
                     />
                   </picture>
                 </div>
@@ -282,7 +310,7 @@ const Profiletable = () => {
               ))}
             </div>
             <div className="font-extrabold mt-2 text-right font-color-gray">
-              MADE BY PASTAINFO.XYZ&nbsp;&nbsp;
+              PASTAINFO.XYZ&nbsp;&nbsp;
             </div>
           </div>
         </div>
