@@ -249,16 +249,12 @@ const Profiletable = () => {
                         <div>
                           {arenatypedp !== '' ? (
                             <Image
-                              src={A3}
+                              src={arenatypedp}
                               height={18}
                               alt={`${profile?.arena.DP}`}
                             />
                           ) : (
-                            <Image
-                              src={A3}
-                              height={18}
-                              alt={`${profile?.arena.DP}`}
-                            />
+                            profile?.arena.DP
                           )}
                         </div>
                         <p className="text-xs">DP</p>
