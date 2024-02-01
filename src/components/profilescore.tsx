@@ -2,15 +2,7 @@ import { Searchresult as Searchresulttype } from '@/store/SearchresultStore';
 import useSearchresultStore from '@/store/SearchresultStore';
 import { useState } from 'react';
 import Image from 'next/image';
-
-import AAA from '../asset/AAA.gif';
-import AA from '../asset/AA.gif';
-import A from '../asset/A.gif';
-import B from '../asset/B.gif';
-import C from '../asset/C.gif';
-import D from '../asset/D.gif';
-import E from '../asset/E.gif';
-import F from '../asset/F.gif';
+import ranktypeParser from '@/utils/ranktypeParser';
 
 interface ProfilescoreProps {
   SearchresultProps: Searchresulttype;
@@ -20,34 +12,7 @@ const Profilescore: React.FC<ProfilescoreProps> = ({ SearchresultProps }) => {
   const { Searchresult, SearchresultSet } = useSearchresultStore();
   const [isDeleteButtonVisible, setIsDeleteButtonVisible] = useState(false);
 
-  let ranktypeurl;
-
-  switch (SearchresultProps.rank) {
-    case 'AAA':
-      ranktypeurl = AAA;
-      break;
-    case 'AA':
-      ranktypeurl = AA;
-      break;
-    case 'A':
-      ranktypeurl = A;
-      break;
-    case 'B':
-      ranktypeurl = B;
-      break;
-    case 'C':
-      ranktypeurl = C;
-      break;
-    case 'D':
-      ranktypeurl = D;
-      break;
-    case 'E':
-      ranktypeurl = E;
-      break;
-    case 'F':
-      ranktypeurl = F;
-      break;
-  }
+  const ranktypeurl = ranktypeParser(SearchresultProps.rank);
 
   const handleMouseOver = () => {
     setIsDeleteButtonVisible(true);
@@ -91,7 +56,7 @@ const Profilescore: React.FC<ProfilescoreProps> = ({ SearchresultProps }) => {
             alt={`${SearchresultProps.rank}`}
           />
         </p>
-        <div className=''>
+        <div className="">
           <p className="">{SearchresultProps.score.split('(')[0]}</p>
         </div>
       </span>

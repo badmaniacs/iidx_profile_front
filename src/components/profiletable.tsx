@@ -85,18 +85,18 @@ const Profiletable = () => {
                   >
                     <p className="basis-7/12">취득 단위</p>
                     <div className="font-bold flex flex-row basis-5/12">
-                      <p className={`basis-1/2 text-center`}>
+                      <div className={`basis-1/2 text-center`}>
                         <div>
                           <div className={classtypesp}>{profile?.class.SP}</div>
                           <div className="text-xs">SP</div>
                         </div>
-                      </p>
-                      <p className={`basis-1/2 text-center`}>
+                      </div>
+                      <div className={`basis-1/2 text-center`}>
                         <div>
                           <div className={classtypedp}>{profile?.class.DP}</div>
                           <div className="text-xs">DP</div>
                         </div>
-                      </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-black ml-5 mb-3 p-2 w-[79%] flex flex-row">
@@ -106,7 +106,7 @@ const Profiletable = () => {
                     >
                       아레나 클래스
                     </p>
-                    <p
+                    <div
                       style={{ fontFamily: 'MonoplexKRWideNerd-Bold' }}
                       className="flex flex-row basis-5/12"
                     >
@@ -139,7 +139,7 @@ const Profiletable = () => {
                         </div>
                         <p className="text-xs text-center">DP</p>
                       </div>
-                    </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-span-2 ">
