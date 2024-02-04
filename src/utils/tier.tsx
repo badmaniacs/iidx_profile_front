@@ -3577,7 +3577,7 @@ export const tierData: tierData[] = [
     title: 'Dahlia',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B',
     version: '31',
   },
   {
@@ -3612,14 +3612,14 @@ export const tierData: tierData[] = [
     title: 'SOLAR ECLIPSE',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'id S',
     version: '31',
   },
   {
     title: '摩天楼',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: 'ep B',
+    hard: 'id B',
     version: '31',
   },
   {
