@@ -1,10 +1,10 @@
-import TierWrapper from '@/components/tierwrapper';
+import TierWrapper from '@/components/tier/tierwrapper';
 import useProfileStore from '@/store/ProfileDataStore';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Cleartypecounter from '@/components/cleartypecounter';
+import Cleartypecounter from '@/components/tier/cleartypecounter';
 import { RiScreenshot2Fill } from 'react-icons/ri';
 import { captureComponent } from '@/utils/screenshot';
 

@@ -10,9 +10,9 @@ const Coloredscore: React.FC<ColoredscoreProps> = ({
   let className = 'text-xs text-white';
 
   const regex = /([A-Za-z+-]+)(\d+)/;
-  const splitedrank = scoreConversion.match(regex);
-  if (splitedrank) {
-    const rank = splitedrank[1];
+  const splitedRank = scoreConversion.match(regex);
+  if (splitedRank) {
+    const rank = splitedRank[1];
     switch (rank) {
       case 'MAX-':
         className += ' font-outline-rainbow';

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 import { Suspense } from 'react';
-import Spinner from '@/components/spinner';
+import Spinner from '@/components/layouts/spinner';
 
 type LayoutProps = {
   children: ReactNode;

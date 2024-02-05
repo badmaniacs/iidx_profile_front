@@ -5,7 +5,7 @@ import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Spinner from '@/components/spinner';
+import Spinner from '@/components/layouts/spinner';
 
 const Update = () => {
   const { generateHandler, status, canGenerate, passMutation } =

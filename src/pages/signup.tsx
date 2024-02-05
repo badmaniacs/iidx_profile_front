@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import ErrorMessage from '@/components/errormessage';
+import ErrorMessage from '@/components/layouts/errormessage';
 import useCreateUser from '@/hooks/useCreateUser';
 import useSignupValidation from '@/hooks/useSignupValidation';
 import { useRouter } from 'next/router';
 import useAuthStore from '@/store/AuthStore';
 import useLoginUser from '@/hooks/useLoginUser';
 import { useEffect } from 'react';
-import Spinner from '@/components/spinner';
+import Spinner from '@/components/layouts/spinner';
 
 const Signup = () => {
   const { createUser, usernameDupError, emailDupError } = useCreateUser();
@@ -73,25 +73,25 @@ const Signup = () => {
             type="text"
             name="username"
             placeholder="ID"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray  bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
           <input
             type="text"
             name="email"
             placeholder="Email"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray  bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
           <input
             type="password"
             name="password"
             placeholder="Password"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray  bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
           <input
             type="password"
             name="passwordConfirm"
             placeholder="Password (Again)"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray  bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
         </div>
         <div className="flex flex-col gap-2">

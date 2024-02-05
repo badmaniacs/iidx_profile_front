@@ -1,4 +1,4 @@
-import Unauthbutton from './unauthbutton';
+import Unauthbutton from '../profile/unauthbutton';
 import Link from 'next/link';
 import Avatar from './avatar';
 import useAuthStore from '@/store/AuthStore';

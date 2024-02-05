@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '@/components/layout';
+import Layout from '@/components/layouts/layout';
 import '@/styles/globals.css';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import HydrationZustand from '@/components/hydrationzustand';
-import Analytics from '@/components/analytics';
+import HydrationZustand from '@/components/layouts/hydrationzustand';
+import Analytics from '@/components/layouts/analytics';
 
 const queryClient = new QueryClient({
   defaultOptions: {

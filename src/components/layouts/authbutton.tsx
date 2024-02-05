@@ -12,6 +12,7 @@ const Authbutton = () => {
     logout();
     clear();
   };
+
   return (
     <>
       <li className="hidden md:block">
