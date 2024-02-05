@@ -10,8 +10,6 @@ const Profile = () => {
   const { isLoggedIn } = useAuthStore();
   const router = useRouter();
 
-
-
   useEffect(() => {
     if (!isLoggedIn) {
       router.push('/signin');
