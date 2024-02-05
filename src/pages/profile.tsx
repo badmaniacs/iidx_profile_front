@@ -1,4 +1,4 @@
-import Profiletable from '@/components/profiletable';
+import Profiletable from '@/components/profile/profiletable';
 import useProfileStore from '@/store/ProfileDataStore';
 import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';

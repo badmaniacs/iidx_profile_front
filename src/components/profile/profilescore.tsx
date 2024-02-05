@@ -12,7 +12,7 @@ const Profilescore: React.FC<ProfilescoreProps> = ({ SearchresultProps }) => {
   const { Searchresult, SearchresultSet } = useSearchresultStore();
   const [isDeleteButtonVisible, setIsDeleteButtonVisible] = useState(false);
 
-  const ranktypeurl = ranktypeParser(SearchresultProps.rank);
+  const ranktypeUrl = ranktypeParser(SearchresultProps.rank);
 
   const handleMouseOver = () => {
     setIsDeleteButtonVisible(true);
@@ -52,7 +52,7 @@ const Profilescore: React.FC<ProfilescoreProps> = ({ SearchresultProps }) => {
         <p className="flex items-center mr-1">
           <Image
             height={12}
-            src={ranktypeurl ? ranktypeurl : ''}
+            src={ranktypeUrl ? ranktypeUrl : ''}
             alt={`${SearchresultProps.rank}`}
           />
         </p>

@@ -1,4 +1,4 @@
-interface SongData {
+export interface SongData {
   [title: string]: [
     string,
     number,
@@ -14874,5 +14874,4 @@ export const songdata: SongData = {
   'Vermilion Carol': ['', 0, 0, 0, 0, 1837, 0, 0, 0, 0, 0, 0],
   'MAXIMUM CHEAT GIRL': ['', 0, 0, 0, 0, 1842, 0, 0, 0, 0, 0, 0],
   'Glitch N Ride': ['', 0, 0, 0, 0, 1389, 0, 0, 0, 0, 0, 0],
-
 };

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import useAuthStore from '@/store/AuthStore';
 import { useRouter } from 'next/router';
 import useGetProfile from '@/hooks/useUpdateProfile';
-import ErrorMessage from '@/components/errormessage';
+import ErrorMessage from '@/components/layouts/errormessage';
 import { useEffect } from 'react';
-import Spinner from '@/components/spinner';
+import Spinner from '@/components/layouts/spinner';
 
 const Signin = () => {
   const { loginMutation, loginError } = useLoginUser();
@@ -46,13 +46,13 @@ const Signin = () => {
             type="text"
             name="username"
             placeholder="ID"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
           <input
             type="password"
             name="password"
             placeholder="Password"
-            className="h-12 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-12 border-2 border-opacity-100 border-lgray  bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           />
           {/* <Link
             href="/forgot-password"

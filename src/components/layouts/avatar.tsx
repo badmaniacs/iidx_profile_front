@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 
 const Avatar = () => {
   const { profile, clear } = useProfileStore();
-  const qpro = profile?.qpro as string;
   const router = useRouter();
   const { logout } = useAuthStore();
   const logoutHandler = async () => {
@@ -35,7 +34,6 @@ const Avatar = () => {
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          {/* <Image src={`${qpro}.png`} alt="" width="20" height="20" /> */}
           {isMobile ? (
             <div className="hamburger-menu text-2xl">☰</div>
           ) : profile ? (

@@ -22,7 +22,7 @@ const Searchbar = () => {
             name="playtype"
             value={formValues.playtype}
             onChange={handleInputChange}
-            className="h-10 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-10 border-2 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           >
             <option key="SP" value="SP">
               SP
@@ -35,7 +35,7 @@ const Searchbar = () => {
             name="difficulty"
             value={formValues.difficulty}
             onChange={handleInputChange}
-            className="h-10 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-10 border-2  border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           >
             <option key="N" value="N">
               N
@@ -54,7 +54,7 @@ const Searchbar = () => {
             name="level"
             value={formValues.level}
             onChange={handleInputChange}
-            className="h-10 border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-10 border-2  border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           >
             {Array.from({ length: 12 }, (_, index) => index + 1).map(
               (number) => (
@@ -71,7 +71,7 @@ const Searchbar = () => {
             value={formValues.title}
             ref={formRef}
             placeholder="추가하실 곡명을 검색해주세요."
-            className="h-10 w-[50%] border-2 border-opacity-100 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
+            className="h-10 w-[50%] border-2 border-lgray border-opacity-30 bg-bbblack pl-3 pr-3 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-offset-transparent focus:ring-blue-500 focus:ring-opacity-50 shadow-ring-offset shadow-ring shadow-none"
           ></input>
         </div>
       </div>
