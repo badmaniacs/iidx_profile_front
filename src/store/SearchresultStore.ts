@@ -14,6 +14,7 @@ export interface Searchresult {
 export interface SearchresultState {
   Searchresult: Searchresult[] | null;
   SearchresultSet: (Searchresult: Searchresult[]) => void;
+  clearSearch: () => void;
 }
 
 export type SearchresultStatePersist = (
@@ -27,6 +28,9 @@ const useSearchresultStore = create<SearchresultState>(
       Searchresult: null,
       SearchresultSet: (searchresult: Searchresult[]) => {
         set({ Searchresult: searchresult });
+      },
+      clearSearch: () => {
+        set({ Searchresult: null });
       },
     }),
     {

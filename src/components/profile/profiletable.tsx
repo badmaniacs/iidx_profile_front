@@ -1,17 +1,18 @@
-import useProfileStore from '@/store/ProfileDataStore';
-import Searchbar from './searchbar';
-import useSearchresultStore from '@/store/SearchresultStore';
-import Profilescore from './profilescore';
 import { useRef } from 'react';
-import { RiScreenshot2Fill } from 'react-icons/ri';
-import { captureComponent } from '@/utils/screenshot';
+import useProfileStore from '@/store/ProfileDataStore';
+import useSearchresultStore from '@/store/SearchresultStore';
 
+import Searchbar from './searchbar';
 import Profiledata from './profiledata';
 import Profiletitle from './profiletitle';
 import Profileclass from './profileclass';
 import Profilearena from './profilearena';
 import Profileqpro from './profileqpro';
 import Profileradar from './profileradar';
+import Profilescore from './profilescore';
+
+import { captureComponent } from '@/utils/screenshot';
+import { RiScreenshot2Fill } from 'react-icons/ri';
 
 const Profiletable = () => {
   const { profile } = useProfileStore();
@@ -47,28 +48,26 @@ const Profiletable = () => {
             ref={captureRef}
             className="relative flex flex-col border-2 border-black bg-profileback text-white h-[742px] mt-4"
           >
-            <div className="flex flex-col">
-              <Profiletitle />
-              <div className="grid grid-cols-5">
-                <div className="flex flex-col col-span-3">
-                  {profileCategory.map((item) => (
-                    <Profiledata
-                      category={item.category}
-                      data={item.data}
-                      key={item.category}
-                    />
-                  ))}
-                  {profile && (
-                    <>
-                      <Profileclass classData={profile.class} />
-                      <Profilearena arenaData={profile.arena} />
-                    </>
-                  )}
+            {profile && (
+              <div className="flex flex-col">
+                <Profiletitle />
+                <div className="grid grid-cols-5">
+                  <div className="flex flex-col col-span-3">
+                    {profileCategory.map((item) => (
+                      <Profiledata
+                        category={item.category}
+                        data={item.data}
+                        key={item.category}
+                      />
+                    ))}
+                    <Profileclass classData={profile.class} />
+                    <Profilearena arenaData={profile.arena} />
+                  </div>
+                  <Profileqpro qpro={profile.qpro} />
                 </div>
-                {profile && <Profileqpro qpro={profile?.qpro} />}
+                <Profileradar radar={profile.radar} />
               </div>
-              {profile && <Profileradar radar={profile.radar} />}
-            </div>
+            )}
             <div className="grid grid-cols-5 grid-rows-3  self-center bg-black w-[94%] h-[23%] ">
               {Searchresult?.map((item) => (
                 <Profilescore key={item.title} SearchresultProps={item} />

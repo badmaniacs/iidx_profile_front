@@ -2,15 +2,18 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useAuthStore from '@/store/AuthStore';
 import useProfileStore from '@/store/ProfileDataStore';
+import useSearchresultStore from '@/store/SearchresultStore';
 
 const Authbutton = () => {
   const router = useRouter();
   const { logout } = useAuthStore();
   const { clear } = useProfileStore();
+  const { clearSearch } = useSearchresultStore();
   const logoutHandler = async () => {
     await router.push('/');
     logout();
     clear();
+    clearSearch();
   };
 
   return (
