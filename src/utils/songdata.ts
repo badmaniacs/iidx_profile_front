@@ -6111,7 +6111,7 @@ export const songdata: SongData = {
     390,
     674,
     1325,
-    0,
+    1551,
     0,
     446,
     978,
@@ -14874,4 +14874,6 @@ export const songdata: SongData = {
   'Vermilion Carol': ['', 0, 0, 0, 0, 1837, 0, 0, 0, 0, 0, 0],
   'MAXIMUM CHEAT GIRL': ['', 0, 0, 0, 0, 1842, 0, 0, 0, 0, 0, 0],
   'Glitch N Ride': ['', 0, 0, 0, 0, 1389, 0, 0, 0, 0, 0, 0],
+  'Ambivalent Vermilia': ['', 0, 0, 0, 0, 2132, 0, 0, 0, 0, 0, 0],
+  Xb10r: ['', 0, 0, 0, 0, 1833, 0, 0, 0, 0, 0, 0],
 };
