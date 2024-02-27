@@ -3,6 +3,7 @@ import Navbar from './navbar';
 import Footer from './footer';
 import { Suspense } from 'react';
 import Spinner from '@/components/layouts/spinner';
+import { Analytics } from '@vercel/analytics/react';
 
 type LayoutProps = {
   children: ReactNode;
@@ -10,12 +11,13 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <Suspense fallback={<Spinner/>}>
+    <Suspense fallback={<Spinner />}>
       <div className="w-full bg-bblack text-ttext">
         <div className="container min-h-screen max-w-screen-lg mx-auto px-4 flex-1 flex flex-col">
           <Navbar />
           <main className="flex-1 py-14 flex items-stretch">
             <div className="w-full">{children}</div>
+            <Analytics />
           </main>
           <Footer />
         </div>
