@@ -3640,7 +3640,7 @@ export const tierData: tierData[] = [
     title: 'Out of Control',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep C',
     version: '31',
   },
   {
@@ -3654,7 +3654,7 @@ export const tierData: tierData[] = [
     title: '表裏一体！？怪盗いいんちょの悩み',
     difficulty: 'LEGGENDARIA',
     normal: '',
-    hard: '',
+    hard: 'ep S',
     version: '31',
   },
   {
@@ -3695,6 +3695,27 @@ export const tierData: tierData[] = [
   {
     title: 'Miracle 5ympho X',
     difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Sword of Vengeance',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'Million Dollar',
+    difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'CADENZA',
+    difficulty: 'ANOTHER',
     normal: '',
     hard: '',
     version: '31',
