@@ -2733,13 +2733,13 @@ export const tierData: tierData[] = [
     hard: 'id A+',
     version: '25',
   },
-  {
-    title: '3!dolon Forc3',
-    difficulty: 'ANOTHER',
-    normal: 'ep B',
-    hard: 'ep B+',
-    version: '28',
-  },
+  // {
+  //   title: '3!dolon Forc3',
+  //   difficulty: 'ANOTHER',
+  //   normal: 'ep B',
+  //   hard: 'ep B+',
+  //   version: '28',
+  // },
   {
     title: '3y3s',
     difficulty: 'ANOTHER',
@@ -3647,7 +3647,7 @@ export const tierData: tierData[] = [
     title: 'Vermilion Carol',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B+',
     version: '31',
   },
   {
@@ -3661,7 +3661,7 @@ export const tierData: tierData[] = [
     title: 'MAXIMUM CHEAT GIRL',
     difficulty: 'ANOTHER',
     normal: '',
-    hard: '',
+    hard: 'ep B+',
     version: '31',
   },
   {
@@ -3675,7 +3675,7 @@ export const tierData: tierData[] = [
     title: 'O/D*20',
     difficulty: 'LEGGENDARIA',
     normal: '',
-    hard: '',
+    hard: 'ep A',
     version: '31',
   },
   {
@@ -3716,6 +3716,20 @@ export const tierData: tierData[] = [
   {
     title: 'CADENZA',
     difficulty: 'ANOTHER',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: '俺ら東京さ行ぐだ',
+    difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
+  {
+    title: 'KING',
+    difficulty: 'LEGGENDARIA',
     normal: '',
     hard: '',
     version: '31',
