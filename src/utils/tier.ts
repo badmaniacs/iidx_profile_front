@@ -3734,4 +3734,11 @@ export const tierData: tierData[] = [
     hard: '',
     version: '31',
   },
+  {
+    title: 'Saturn',
+    difficulty: 'LEGGENDARIA',
+    normal: '',
+    hard: '',
+    version: '31',
+  },
 ];
